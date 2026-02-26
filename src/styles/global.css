@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #e8621a;
+  --color-orange-light: #fff0e8;
+  --color-orange-dark: #c4501a;
+  --color-blue: #1b6ca8;
+  --color-blue-light: #ebf5ff;
+  --color-blue-dark: #145a8f;
+  --color-green: #3daa5c;
+  --color-green-light: #e8f8ef;
+  --color-cream: #fffbf7;
+  --color-cream-dark: #f5efe6;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+}
+
+.fade.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 {
+  transition-delay: 0.08s;
+}
+
+.d2 {
+  transition-delay: 0.16s;
+}
+
+.d3 {
+  transition-delay: 0.24s;
+}
+
+@keyframes pulse2 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.pulse {
+  animation: pulse2 2s infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.au {
+  animation: fadeUp 0.5s ease both;
+}
+.au1 {
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+.au2 {
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+.au3 {
+  animation: fadeUp 0.5s 0.3s ease both;
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.3s;
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding-bottom: 1rem;
+}
+
+.faq-item.open .faq-icon {
+  background: #ebf5ff;
+  color: #1b6ca8;
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition:
+    background 0.2s,
+    transform 0.3s;
+}
+
+/* Navbar scroll shadow */
+.nav-scrolled {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,79 @@
+---
+---
+<nav id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 flex-shrink-0">
+      <img src="./logo.webp" alt="Ti Aiuto Con Le Bollette" class="w-10 h-10 rounded-full object-cover" />
+      <div class="hidden sm:block">
+        <div class="font-bold text-gray-900 text-sm leading-tight">Ti Aiuto Con Le Bollette</div>
+        <div class="text-xs text-gray-400 font-normal">Stefano Moretti · Consulente Energia</div>
+      </div>
+    </a>
+    <!-- Links desktop -->
+    <div class="hidden md:flex items-center gap-1">
+      <a href="#chi-sono"
+        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Chi
+        sono</a>
+      <a href="#servizi"
+        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Servizi</a>
+      <a href="#perche"
+        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Perché
+        scegliermi</a>
+      <a href="#faq"
+        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">FAQ</a>
+    </div>
+    <!-- CTA + hamburger -->
+    <div class="flex items-center gap-3">
+      <a href="#contatti"
+        class="bg-orange hover:bg-orange-dark text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors whitespace-nowrap">
+        Consulenza gratuita
+      </a>
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-1">
+        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
+        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
+        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-5 py-4 flex flex-col gap-2">
+    <a href="#chi-sono" class="text-gray-700 font-medium py-2 border-b border-gray-50">Chi
+      sono</a>
+    <a href="#servizi" class="text-gray-700 font-medium py-2 border-b border-gray-50">Servizi</a>
+    <a href="#perche" class="text-gray-700 font-medium py-2 border-b border-gray-50">Perché
+      scegliermi</a>
+    <a href="#faq" class="text-gray-700 font-medium py-2">FAQ</a>
+  </div>
+</nav>
+
+<script>
+  // Navbar shadow on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (navbar) {
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 10);
+    }
+  });
+
+  // Mobile nav
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerBtn = document.getElementById('hamburger');
+  
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+      if (mobileMenu) mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  if (mobileLinks) {
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>
