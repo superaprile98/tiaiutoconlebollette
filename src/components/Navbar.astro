@@ -27,12 +27,17 @@
     <!-- Links desktop -->
     <div class="hidden md:flex items-center gap-1">
       {
-        ["Chi siamo", "Servizi", "Perché", "FAQ"].map((item) => (
+        [
+          { label: "Chi siamo", href: "#chi-sono" },
+          { label: "Servizi", href: "#servizi" },
+          { label: "Perché noi", href: "#perche" },
+          { label: "FAQ", href: "#faq" },
+        ].map((item) => (
           <a
-            href={`#${item.toLowerCase().replace(" ", "-")}`}
+            href={item.href}
             class="px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-navy/60 hover:text-orange transition-all duration-300 relative group"
           >
-            {item}
+            {item.label}
             <span class="absolute bottom-1 left-4 right-4 h-0.5 bg-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </a>
         ))
@@ -65,18 +70,23 @@
     </div>
   </div>
 
-  <!-- Mobile menu -->
   <div
     id="mobile-menu"
     class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100 flex-col py-6"
   >
     {
-      ["Chi siamo", "Servizi", "Perché", "FAQ", "Contatti"].map((item) => (
+      [
+        { label: "Chi siamo", href: "#chi-sono" },
+        { label: "Servizi", href: "#servizi" },
+        { label: "Perché noi", href: "#perche" },
+        { label: "FAQ", href: "#faq" },
+        { label: "Contatti", href: "#contatti" },
+      ].map((item) => (
         <a
-          href={`#${item.toLowerCase().replace(" ", "-")}`}
+          href={item.href}
           class="px-8 py-4 text-xs font-black uppercase tracking-widest text-navy border-b border-gray-50 last:border-0 active:bg-gray-50 transition-colors"
         >
-          {item}
+          {item.label}
         </a>
       ))
     }
