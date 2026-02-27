@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
 
+interface Props {
+  title: string;
+}
+
 const { title } = Astro.props;
 ---
 
@@ -10,16 +14,24 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/webp" href="/logo.webp" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta
       name="description"
-      content="Consulenza energetica professionale e trasparente nell'Empolese Valdelsa con Stefano Moretti."
+      content="Diamo un volto umano all'energia. Consulenza energetica trasparente e professionale nell'Empolese Valdelsa con Stefano Moretti."
     />
 
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Consulenza energetica professionale e trasparente nell'Empolese Valdelsa. Diamo un volto umano alla tua bolletta."
+    />
     <meta property="og:image" content="/logo.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -29,6 +41,7 @@ const { title } = Astro.props;
     <slot />
 
     <script>
+      // Scroll reveal with IntersectionObserver
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -41,7 +54,9 @@ const { title } = Astro.props;
         { threshold: 0.1 },
       );
 
-      document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
+      document.querySelectorAll(".fade").forEach((el) => {
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
