@@ -169,9 +169,37 @@ let formStatus: "idle" | "success" | "error" = "idle";
           </div>
           <div class="flex flex-col gap-2">
             <label
+              for="user_subject"
+              class="text-xs font-black text-navy uppercase tracking-widest px-1"
+              >Motivo del contatto</label
+            >
+            <select
+              id="user_subject"
+              name="subject"
+              required
+              class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition shadow-sm appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected
+                >Seleziona un argomento...</option
+              >
+              <option value="Analisi bolletta Luce"
+                >Analisi bolletta Luce</option
+              >
+              <option value="Analisi bolletta Gas">Analisi bolletta Gas</option>
+              <option value="Analisi bollette Business"
+                >Analisi bollette Business</option
+              >
+              <option value="Informazioni generali"
+                >Informazioni generali</option
+              >
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label
               for="user_message"
               class="text-xs font-black text-navy uppercase tracking-widest px-1"
-              >Cosa desideri chiedermi?</label
+              >Cosa desideri chiederci?</label
             >
             <textarea
               id="user_message"
