@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   const data = await request.formData();
   const nome = data.get("name")?.toString();
   const mail = data.get("contact")?.toString();
@@ -16,7 +16,10 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const apiKey = import.meta.env.RESEND_API_KEY;
+  // Supporto locale (import.meta.env) e produzione Cloudflare (locals.runtime.env)
+  const runtime = (locals as any).runtime;
+  const apiKey = import.meta.env.RESEND_API_KEY || runtime?.env?.RESEND_API_KEY;
+
   if (!apiKey) {
     return new Response(
       JSON.stringify({
