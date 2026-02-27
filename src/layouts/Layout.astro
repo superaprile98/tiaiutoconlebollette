@@ -1,38 +1,47 @@
 ---
-import '../styles/global.css';
-
-interface Props {
-  title: string;
-}
+import "../styles/global.css";
 
 const { title } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="/logo.webp" />
     <title>{title}</title>
-    <meta name="description"
-      content="Risparmia su luce e gas con Stefano Moretti, consulente energia nell'Empolese Valdelsa. Consulenza gratuita, zero burocrazia, zero stress." />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Consulenza energetica professionale e trasparente nell'Empolese Valdelsa con Stefano Moretti."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:image" content="/logo.webp" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-white font-sans text-gray-800 overflow-x-hidden">
     <slot />
-    
-    <script>
-      // Scroll reveal with IntersectionObserver
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.1 });
 
-      document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
