@@ -3,22 +3,24 @@
 
 <div
   id="cookie"
-  class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-2xl shadow-xl px-5 py-4 flex flex-wrap items-center gap-4 max-w-xl w-[calc(100%-2rem)] z-50"
+  class="fixed bottom-32 md:bottom-12 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md border border-gray-100 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 md:p-8 flex flex-col items-center text-center gap-6 max-w-sm w-[calc(100%-2rem)] z-99999"
   style="animation: fadeUp .4s 1.2s ease both; opacity:0"
 >
-  <p class="text-xs text-gray-500 flex-1 min-w-48 leading-relaxed">
+  <p class="text-sm text-gray-500 leading-relaxed font-medium">
     Usiamo solo cookie tecnici necessari al funzionamento. Nessun dato ceduto a
-    terzi. <a href="/cookie" class="text-blue">Cookie policy</a>.
+    terzi. <a href="/cookie" class="text-orange font-bold hover:underline"
+      >Cookie policy</a
+    >.
   </p>
-  <div class="flex gap-2 shrink-0">
+  <div class="flex flex-col w-full gap-3">
     <button
       id="accept-cookies"
-      class="bg-blue text-white text-xs font-semibold px-4 py-2 rounded-lg"
-      >Accetta</button
+      class="w-full bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest py-4 rounded-2xl transition-all shadow-lg shadow-navy/10 hover:shadow-orange/20 cursor-pointer hover:scale-[1.02] active:scale-95"
+      >Accetta Tutto</button
     >
     <button
       id="accept-necessary-cookies"
-      class="border border-gray-200 text-gray-400 text-xs px-4 py-2 rounded-lg"
+      class="w-full border border-gray-100 text-gray-400 hover:text-navy hover:bg-gray-50 text-[11px] font-black uppercase tracking-widest py-4 rounded-2xl transition-all cursor-pointer hover:scale-[1.02] active:scale-95"
       >Solo necessari</button
     >
   </div>
