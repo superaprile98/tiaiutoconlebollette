@@ -62,7 +62,7 @@
             <div>
               <div class="text-white text-sm font-bold">Zona operativa</div>
               <div class="text-white/40 text-xs">
-                Empolese Valdelsa · Toscana
+                Empoli e Provincia · Toscana
               </div>
             </div>
           </div>
@@ -136,6 +136,19 @@
         </div>
 
         <form id="cform" class="flex flex-col gap-6">
+          <!-- Web3Forms Config -->
+          <input
+            type="hidden"
+            name="access_key"
+            value={import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY}
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="Nuova richiesta da tiaiutoconlebollette.it"
+          />
+          <input type="hidden" name="from_name" value="Sito Web" />
+
           <div class="grid md:grid-cols-2 gap-6">
             <div class="flex flex-col gap-2">
               <label
@@ -146,7 +159,7 @@
               <input
                 id="user_name"
                 type="text"
-                name="user_name"
+                name="name"
                 placeholder="Mario Rossi"
                 required
                 class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition placeholder:text-gray-300 shadow-sm"
@@ -154,14 +167,14 @@
             </div>
             <div class="flex flex-col gap-2">
               <label
-                for="user_surname"
+                for="user_contact"
                 class="text-xs font-black text-navy uppercase tracking-widest px-1"
                 >Email o Telefono</label
               >
               <input
-                id="user_surname"
+                id="user_contact"
                 type="text"
-                name="user_surname"
+                name="contact"
                 placeholder="mario@email.it"
                 required
                 class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition placeholder:text-gray-300 shadow-sm"
@@ -176,7 +189,7 @@
             >
             <textarea
               id="user_message"
-              name="user_message"
+              name="message"
               placeholder="Vorrei analizzare la mia bolletta luce..."
               rows="4"
               class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition resize-none placeholder:text-gray-300 shadow-sm"
@@ -226,12 +239,7 @@
 </section>
 
 <script>
-  import emailjs from "@emailjs/browser";
-
-  // Utilizzo delle variabili d'ambiente per EmailJS
-  const EMAILJS_SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
-  const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
-  const EMAILJS_PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+  const ACCESS_KEY = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
 
   const cform = document.getElementById("cform") as HTMLFormElement;
   const formOk = document.getElementById("form-ok");
@@ -246,9 +254,9 @@
 
       if (!cform.checkValidity()) return;
 
-      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      if (!ACCESS_KEY) {
         alert(
-          "ATTENZIONE: Devi configurare i parametri di EmailJS nel pannello delle variabili d'ambiente (Environment Variables) o nel file .env!",
+          "ATTENZIONE: Devi configurare PUBLIC_WEB3FORMS_ACCESS_KEY nel file .env!",
         );
         return;
       }
@@ -262,20 +270,32 @@
       }
       if (formError) formError.classList.add("hidden");
 
-      try {
-        await emailjs.sendForm(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          cform,
-          EMAILJS_PUBLIC_KEY,
-        );
+      const formData = new FormData(cform);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-        // Successo
-        cform.style.display = "none";
-        if (formOk) formOk.classList.remove("hidden");
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          // Successo
+          cform.style.display = "none";
+          if (formOk) formOk.classList.remove("hidden");
+        } else {
+          // Errore API
+          console.error("Errore Web3Forms:", result);
+          if (formError) formError.classList.remove("hidden");
+        }
       } catch (error) {
-        console.error("Errore invio email:", error);
-        // Errore
+        console.error("Errore invio form:", error);
         if (formError) formError.classList.remove("hidden");
       } finally {
         // Ripristino stato bottone

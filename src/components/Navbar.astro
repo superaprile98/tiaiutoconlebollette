@@ -17,14 +17,9 @@
       />
       <div class="hidden sm:block">
         <div
-          class="font-black text-navy text-sm md:text-base tracking-tighter leading-none mb-1"
+          class="font-black text-navy text-sm md:text-lg tracking-tighter leading-none"
         >
-          Stefano Moretti
-        </div>
-        <div
-          class="text-[9px] md:text-[10px] text-orange font-black uppercase tracking-[0.2em]"
-        >
-          Consulente Energetico
+          Ti aiuto <span class="text-orange">con le bollette</span>
         </div>
       </div>
     </a>
@@ -32,7 +27,7 @@
     <!-- Links desktop -->
     <div class="hidden md:flex items-center gap-1">
       {
-        ["Chi sono", "Servizi", "Perché", "FAQ"].map((item) => (
+        ["Chi siamo", "Servizi", "Perché", "FAQ"].map((item) => (
           <a
             href={`#${item.toLowerCase().replace(" ", "-")}`}
             class="px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-navy/60 hover:text-orange transition-all duration-300 relative group"
@@ -76,7 +71,7 @@
     class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100 flex-col py-6"
   >
     {
-      ["Chi sono", "Servizi", "Perché", "FAQ", "Contatti"].map((item) => (
+      ["Chi siamo", "Servizi", "Perché", "FAQ", "Contatti"].map((item) => (
         <a
           href={`#${item.toLowerCase().replace(" ", "-")}`}
           class="px-8 py-4 text-xs font-black uppercase tracking-widest text-navy border-b border-gray-50 last:border-0 active:bg-gray-50 transition-colors"
