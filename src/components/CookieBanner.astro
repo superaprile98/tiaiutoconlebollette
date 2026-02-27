@@ -1,35 +1,46 @@
 ---
 ---
-  <div id="cookie"
-    class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-2xl shadow-xl px-5 py-4 flex flex-wrap items-center gap-4 max-w-xl w-[calc(100%-2rem)] z-50"
-    style="animation: fadeUp .4s 1.2s ease both; opacity:0">
-    <p class="text-xs text-gray-500 flex-1 min-w-48 leading-relaxed">Usiamo solo cookie tecnici necessari al
-      funzionamento. Nessun dato ceduto a terzi. <a href="#" class="text-blue">Cookie policy</a>.</p>
-    <div class="flex gap-2 flex-shrink-0">
-      <button id="accept-cookies"
-        class="bg-blue text-white text-xs font-semibold px-4 py-2 rounded-lg">Accetta</button>
-      <button id="accept-necessary-cookies" class="border border-gray-200 text-gray-400 text-xs px-4 py-2 rounded-lg">Solo
-        necessari</button>
-    </div>
+
+<div
+  id="cookie"
+  class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-2xl shadow-xl px-5 py-4 flex flex-wrap items-center gap-4 max-w-xl w-[calc(100%-2rem)] z-50"
+  style="animation: fadeUp .4s 1.2s ease both; opacity:0"
+>
+  <p class="text-xs text-gray-500 flex-1 min-w-48 leading-relaxed">
+    Usiamo solo cookie tecnici necessari al funzionamento. Nessun dato ceduto a
+    terzi. <a href="/cookie" class="text-blue">Cookie policy</a>.
+  </p>
+  <div class="flex gap-2 shrink-0">
+    <button
+      id="accept-cookies"
+      class="bg-blue text-white text-xs font-semibold px-4 py-2 rounded-lg"
+      >Accetta</button
+    >
+    <button
+      id="accept-necessary-cookies"
+      class="border border-gray-200 text-gray-400 text-xs px-4 py-2 rounded-lg"
+      >Solo necessari</button
+    >
   </div>
+</div>
 
 <script>
   // Cookie Banner
-  const cookieEl = document.getElementById('cookie');
-  const acceptBtns = cookieEl?.querySelectorAll('button');
+  const cookieEl = document.getElementById("cookie");
+  const acceptBtns = cookieEl?.querySelectorAll("button");
 
   if (cookieEl) {
-    if (localStorage.getItem('ck') === '1') {
-      cookieEl.style.display = 'none';
+    if (localStorage.getItem("ck") === "1") {
+      cookieEl.style.display = "none";
     } else {
-      cookieEl.style.opacity = '1';
+      cookieEl.style.opacity = "1";
     }
 
     if (acceptBtns) {
-      acceptBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          cookieEl.style.display = 'none';
-          localStorage.setItem('ck', '1');
+      acceptBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          cookieEl.style.display = "none";
+          localStorage.setItem("ck", "1");
         });
       });
     }

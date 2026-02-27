@@ -1,182 +1,307 @@
 ---
 ---
-  <section id="contatti" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5">
-      <div class="fade text-center mb-12">
-        <div
-          class="inline-block bg-orange-light text-orange text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-          Contatti</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Parliamoci.</h2>
-        <p class="text-gray-400 font-light max-w-md mx-auto text-sm">Compila il modulo o scrivimi. Ti rispondo entro 24
-          ore. Gratuito e senza impegno.</p>
-      </div>
+
+<section id="contatti" class="py-24 bg-navy relative overflow-hidden">
+  <!-- Decorative Gradient Background -->
+  <div
+    class="absolute inset-0 bg-linear-to-b from-black/20 to-transparent pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-5 relative z-10">
+    <div class="fade text-center mb-16">
       <div
-        class="fade d1 max-w-4xl mx-auto grid md:grid-cols-5 rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
-        <!-- Aside -->
-        <div class="md:col-span-2 bg-blue p-8 flex flex-col gap-6">
-          <div>
-            <div class="font-bold text-white text-lg">Stefano Moretti</div>
-            <div class="text-white/50 text-xs mt-1 font-light">Agente di commercio · Consulente energia</div>
+        class="inline-block bg-white/10 text-orange text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
+      >
+        Contatti
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+        Iniziamo a risparmiare.
+      </h2>
+      <p
+        class="text-white/40 font-light max-w-lg mx-auto text-lg leading-relaxed"
+      >
+        Analisi gratuita e senza impegno. Ti ricontatto io entro 24 ore.
+      </p>
+    </div>
+    <div
+      class="fade d1 max-w-5xl mx-auto grid md:grid-cols-5 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl"
+    >
+      <!-- Aside Info -->
+      <div
+        class="md:col-span-2 bg-black/20 backdrop-blur-md p-10 md:p-12 flex flex-col gap-10 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-orange/5 rounded-full -mr-32 -mt-32 blur-3xl"
+        >
+        </div>
+        <div>
+          <div class="font-black text-white text-2xl tracking-tight">
+            Stefano Moretti
           </div>
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-3 items-start">
-              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-sm flex-shrink-0">📍
-              </div>
-              <div>
-                <div class="text-white text-sm font-medium">Zona operativa</div>
-                <div class="text-white/40 text-xs">Empolese Valdelsa · Toscana</div>
-              </div>
-            </div>
-            <div class="flex gap-3 items-start">
-              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-sm flex-shrink-0">📞
-              </div>
-              <div>
-                <div class="text-white text-sm font-medium">Telefono</div>
-                <div class="text-white/40 text-xs">Da aggiungere</div>
-              </div>
-            </div>
-            <div class="flex gap-3 items-start">
-              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-sm flex-shrink-0">✉️
-              </div>
-              <div>
-                <div class="text-white text-sm font-medium">Email</div>
-                <div class="text-white/40 text-xs">Da aggiungere</div>
-              </div>
-            </div>
-            <div class="flex gap-3 items-start">
-              <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-sm flex-shrink-0">🕐
-              </div>
-              <div>
-                <div class="text-white text-sm font-medium">Orari</div>
-                <div class="text-white/40 text-xs">Lun–Ven 9:00–18:00</div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-auto text-white/20 text-xs leading-relaxed">
-            P.IVA: da aggiungere<br>Reg. Agenti: da aggiungere<br>© 2025 Stefano Moretti
+          <div
+            class="text-orange text-xs mt-2 font-bold uppercase tracking-widest"
+          >
+            Specialista Luce e Gas
           </div>
         </div>
-        <!-- Form -->
-        <div class="md:col-span-3 bg-cream p-8">
-          <div id="form-ok" class="hidden text-center py-10">
-            <div class="text-4xl mb-3">✅</div>
-            <h4 class="font-bold text-gray-900 text-lg mb-1">Messaggio inviato!</h4>
-            <p class="text-gray-400 text-sm">Ti contatterò entro 24 ore.</p>
+        <div class="flex flex-col gap-6">
+          <div class="flex gap-4 items-center">
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 fill-white/60"
+                viewBox="0 0 24 24"
+                ><path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white text-sm font-bold">Zona operativa</div>
+              <div class="text-white/40 text-xs">
+                Empolese Valdelsa · Toscana
+              </div>
+            </div>
           </div>
-          <form id="cform" class="flex flex-col gap-4">
-            <div class="grid grid-cols-2 gap-3">
-              <div class="flex flex-col gap-1">
-                <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Nome *</label>
-                <input type="text" name="user_name" placeholder="Mario" required
-                  class="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 outline-none focus:border-blue focus:ring-2 focus:ring-blue/10 transition" />
+          <a
+            href="https://wa.me/39XXXXXXXXXX?text=Ciao%20Stefano,%20vorrei%20maggiori%20informazioni%20sulla%20tua%20consulenza%20per%20le%20bollette"
+            target="_blank"
+            class="flex gap-4 items-center group/wa transition-all hover:translate-x-1"
+          >
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10 group-hover/wa:border-white/20 transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="w-5 h-5 fill-[#25D366]"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white text-sm font-bold">WhatsApp</div>
+              <div class="text-white/40 text-xs">Risposta immediata</div>
+            </div>
+          </a>
+          <a
+            href="mailto:info@tiaiutoconlebollette.it"
+            id="email-link"
+            class="flex gap-4 items-center group/mail transition-all hover:translate-x-1 relative"
+          >
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10 group-hover/mail:border-white/20 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 fill-white/60"
+                viewBox="0 0 24 24"
+                ><path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white text-sm font-bold flex items-center gap-2">
+                Email
+                <span
+                  id="copy-badge"
+                  class="text-[9px] text-white px-1.5 py-0.5 rounded opacity-0 transition-opacity"
+                  >COPIATO!</span
+                >
               </div>
-              <div class="flex flex-col gap-1">
-                <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Cognome *</label>
-                <input type="text" name="user_surname" placeholder="Rossi" required
-                  class="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 outline-none focus:border-blue focus:ring-2 focus:ring-blue/10 transition" />
+              <div class="text-xs text-white/40">
+                info@tiaiutoconlebollette.it
               </div>
             </div>
-            <div class="flex flex-col gap-1">
-              <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Telefono *</label>
-              <input type="tel" name="user_phone" placeholder="333 000 0000" required
-                class="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 outline-none focus:border-blue focus:ring-2 focus:ring-blue/10 transition" />
-            </div>
-            <div class="flex flex-col gap-1">
-              <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Tipo di richiesta</label>
-              <select name="user_request_type"
-                class="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 outline-none focus:border-blue focus:ring-2 focus:ring-blue/10 transition">
-                <option value="">Seleziona...</option>
-                <option value="Analisi bolletta luce">Analisi bolletta luce</option>
-                <option value="Analisi bolletta gas">Analisi bolletta gas</option>
-                <option value="Cambio fornitore">Cambio fornitore</option>
-                <option value="Consulenza azienda / negozio">Consulenza azienda / negozio</option>
-                <option value="Altro">Altro</option>
-              </select>
-            </div>
-            <div class="flex flex-col gap-1">
-              <label class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Messaggio</label>
-              <textarea name="user_message" placeholder="Raccontami la tua situazione..." rows="3"
-                class="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 outline-none focus:border-blue focus:ring-2 focus:ring-blue/10 transition resize-none"></textarea>
-            </div>
-            <div class="flex gap-2 items-start">
-              <input type="checkbox" id="priv" required class="mt-0.5 flex-shrink-0 accent-blue" />
-              <label for="priv" class="text-xs text-gray-400 leading-relaxed">Ho letto e accetto la <a href="#privacy"
-                  class="text-blue">Privacy Policy</a>. Acconsento al trattamento dei miei dati ai sensi del GDPR (Reg.
-                UE 2016/679).</label>
-            </div>
-            <!-- Feedback caricamento -->
-            <div id="form-error" class="hidden text-red-500 text-sm font-semibold">Si è verificato un errore. Riprova più tardi.</div>
-            
-            <button type="submit" id="submit-btn"
-              class="bg-orange hover:bg-orange-dark text-white font-bold py-3.5 rounded-xl text-sm transition-all hover:-translate-y-0.5 hover:shadow-md flex items-center justify-center gap-2">
-              <span id="submit-text">Invia richiesta gratuita →</span>
-              <span id="submit-spinner" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-            </button>
-          </form>
+          </a>
         </div>
+        <div
+          class="mt-auto pt-10 border-t border-white/5 text-white/20 text-[10px] tracking-widest uppercase font-bold"
+        >
+          © {new Date().getFullYear()} Stefano Moretti<br />Consulenza Gratuita
+        </div>
+      </div>
+      <!-- Form Content -->
+      <div class="md:col-span-3 bg-cream p-10 md:p-14">
+        <div id="form-ok" class="hidden text-center py-20">
+          <div class="text-6xl mb-6">✅</div>
+          <h4 class="font-black text-navy text-2xl mb-2">Messaggio inviato!</h4>
+          <p class="text-gray-400">Ti contatterò brevissimo. Grazie.</p>
+        </div>
+
+        <form id="cform" class="flex flex-col gap-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+              <label
+                for="user_name"
+                class="text-xs font-black text-navy uppercase tracking-widest px-1"
+                >Nome</label
+              >
+              <input
+                id="user_name"
+                type="text"
+                name="user_name"
+                placeholder="Mario Rossi"
+                required
+                class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition placeholder:text-gray-300 shadow-sm"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                for="user_surname"
+                class="text-xs font-black text-navy uppercase tracking-widest px-1"
+                >Email o Telefono</label
+              >
+              <input
+                id="user_surname"
+                type="text"
+                name="user_surname"
+                placeholder="mario@email.it"
+                required
+                class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition placeholder:text-gray-300 shadow-sm"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label
+              for="user_message"
+              class="text-xs font-black text-navy uppercase tracking-widest px-1"
+              >Cosa desideri chiedermi?</label
+            >
+            <textarea
+              id="user_message"
+              name="user_message"
+              placeholder="Vorrei analizzare la mia bolletta luce..."
+              rows="4"
+              class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition resize-none placeholder:text-gray-300 shadow-sm"
+            ></textarea>
+          </div>
+          <div class="flex gap-3 items-start px-1">
+            <input
+              type="checkbox"
+              id="priv"
+              required
+              class="mt-1 shrink-0 accent-navy w-4 h-4 cursor-pointer"
+            />
+            <label
+              for="priv"
+              class="text-[11px] text-gray-400 leading-relaxed cursor-pointer"
+              >Acconsento al trattamento dei miei dati personali ai sensi della <a
+                href="/privacy"
+                class="text-navy font-bold hover:underline">Privacy Policy</a
+              > per essere ricontattato. La tua privacy è importante.</label
+            >
+          </div>
+
+          <div
+            id="form-error"
+            class="hidden text-red-500 text-xs font-bold text-center"
+          >
+            Si è verificato un errore. Riprova o scrivi direttamente via mail.
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            class="bg-navy hover:bg-navy-light text-white font-black py-5 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-navy/20 flex items-center justify-center gap-3 relative overflow-hidden group"
+          >
+            <span id="submit-text" class="relative z-10 transition-colors"
+              >Invia richiesta gratuita →</span
+            >
+            <span
+              id="submit-spinner"
+              class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin relative z-10"
+            ></span>
+          </button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <script>
-  import emailjs from '@emailjs/browser';
+  import emailjs from "@emailjs/browser";
 
   // Utilizzo delle variabili d'ambiente per EmailJS
   const EMAILJS_SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
 
-  const cform = document.getElementById('cform') as HTMLFormElement;
-  const formOk = document.getElementById('form-ok');
-  const formError = document.getElementById('form-error');
-  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
-  const submitText = document.getElementById('submit-text');
-  const submitSpinner = document.getElementById('submit-spinner');
-  
+  const cform = document.getElementById("cform") as HTMLFormElement;
+  const formOk = document.getElementById("form-ok");
+  const formError = document.getElementById("form-error");
+  const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+  const submitText = document.getElementById("submit-text");
+  const submitSpinner = document.getElementById("submit-spinner");
+
   if (cform) {
-    cform.addEventListener('submit', async (e) => {
+    cform.addEventListener("submit", async (e) => {
       e.preventDefault();
-      
+
       if (!cform.checkValidity()) return;
 
-      if(!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY){
-          alert("ATTENZIONE: Devi configurare i parametri di EmailJS nel pannello delle variabili d'ambiente (Environment Variables) o nel file .env!");
-          return;
+      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+        alert(
+          "ATTENZIONE: Devi configurare i parametri di EmailJS nel pannello delle variabili d'ambiente (Environment Variables) o nel file .env!",
+        );
+        return;
       }
-      
+
       // Stato di caricamento
       if (submitBtn && submitText && submitSpinner) {
         submitBtn.disabled = true;
-        submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-        submitText.textContent = 'Invio in corso...';
-        submitSpinner.classList.remove('hidden');
+        submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+        submitText.textContent = "Invio in corso...";
+        submitSpinner.classList.remove("hidden");
       }
-      if (formError) formError.classList.add('hidden');
+      if (formError) formError.classList.add("hidden");
 
       try {
         await emailjs.sendForm(
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
           cform,
-          EMAILJS_PUBLIC_KEY
+          EMAILJS_PUBLIC_KEY,
         );
-        
+
         // Successo
-        cform.style.display = 'none';
-        if (formOk) formOk.classList.remove('hidden');
+        cform.style.display = "none";
+        if (formOk) formOk.classList.remove("hidden");
       } catch (error) {
-        console.error('Errore invio email:', error);
+        console.error("Errore invio email:", error);
         // Errore
-        if (formError) formError.classList.remove('hidden');
+        if (formError) formError.classList.remove("hidden");
       } finally {
         // Ripristino stato bottone
         if (submitBtn && submitText && submitSpinner) {
           submitBtn.disabled = false;
-          submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
-          submitText.textContent = 'Invia richiesta gratuita →';
-          submitSpinner.classList.add('hidden');
+          submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+          submitText.textContent = "Invia richiesta gratuita →";
+          submitSpinner.classList.add("hidden");
         }
       }
+    });
+  }
+
+  // Email Copy Logic
+  const emailLink = document.getElementById("email-link");
+  const copyBadge = document.getElementById("copy-badge");
+
+  if (emailLink && copyBadge) {
+    emailLink.addEventListener("click", () => {
+      const emailText = "info@tiaiutoconlebollette.it";
+      navigator.clipboard.writeText(emailText).then(() => {
+        copyBadge.classList.replace("opacity-0", "opacity-100");
+        setTimeout(() => {
+          copyBadge.classList.replace("opacity-100", "opacity-0");
+        }, 2000);
+      });
     });
   }
 </script>

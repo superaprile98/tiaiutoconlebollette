@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-orange: #e8621a;
-  --color-orange-light: #fff0e8;
-  --color-orange-dark: #c4501a;
-  --color-blue: #1b6ca8;
-  --color-blue-light: #ebf5ff;
-  --color-blue-dark: #145a8f;
-  --color-green: #3daa5c;
-  --color-green-light: #e8f8ef;
-  --color-cream: #fffbf7;
-  --color-cream-dark: #f5efe6;
+  --color-orange: #d97706; /* Amber Pastello/Matte - Più serio */
+  --color-orange-light: #fff7ed;
+  --color-orange-dark: #b45309;
+  --color-blue: #1e293b; /* Navy opaco/pastello */
+  --color-blue-light: #f8fafc;
+  --color-blue-dark: #0f172a;
+  --color-navy: #0f172a; /* Quasi nero ma pastello (Matte Navy) */
+  --color-navy-light: #1e293b;
+  --color-green: #374151; /* Antracite pastello per i check, molto più serio */
+  --color-green-light: #f3f4f6;
+  --color-cream: #fafafa; /* Color pietra (molto pastello) */
+  --color-cream-dark: #f5f5f5;
   --font-sans: "Plus Jakarta Sans", sans-serif;
 }
 

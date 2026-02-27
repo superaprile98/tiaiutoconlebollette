@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Privacy Policy | Stefano Moretti">
+  <Navbar />
+
+  <main class="pt-32 pb-20 bg-cream min-h-screen">
+    <div class="max-w-3xl mx-auto px-5">
+      <h1 class="text-4xl font-black text-navy mb-10 tracking-tight">
+        Privacy Policy
+      </h1>
+
+      <div
+        class="prose prose-slate prose-navy max-w-none space-y-10 text-gray-600 font-light leading-relaxed"
+      >
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            1. Titolare del Trattamento
+          </h2>
+          <p>
+            Il titolare del trattamento dei dati è <strong
+              >Stefano Moretti</strong
+            >, con sede operativa nell'Empolese Valdelsa, Toscana. Per qualsiasi
+            domanda relativa alla privacy, puoi scrivermi a: <a
+              href="mailto:info@tiaiutoconlebollette.it"
+              class="text-orange font-bold hover:underline"
+              >info@tiaiutoconlebollette.it</a
+            >.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            2. Dati Raccolti e Finalità
+          </h2>
+          <p>
+            Attraverso il modulo di contatto o l'invio di email, raccolgo solo i
+            dati che decidi di fornirmi volontariamente (come nome, cognome,
+            email o numero di telefono). Questi dati vengono utilizzati <strong
+              >esclusivamente</strong
+            > per:
+          </p>
+          <ul class="list-disc pl-5 mt-4 space-y-2">
+            <li>Rispondere alle tue richieste di informazioni o preventivo.</li>
+            <li>Fornirti la consulenza energetica richiesta.</li>
+            <li>Adempiere ad eventuali obblighi di legge.</li>
+          </ul>
+          <p class="mt-4">
+            Non utilizzo i tuoi dati per invio di spam, newsletter non richieste
+            o per cessione a terze parti a scopo pubblicitario.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            3. Base Legale del Trattamento
+          </h2>
+          <p>
+            Tratto i tuoi dati personali sulla base del tuo consenso (quando
+            compili il form o mi scrivi) e per l'esecuzione di misure
+            pre-contrattuali (la richiesta di consulenza).
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            4. I Tuoi Diritti
+          </h2>
+          <p>Secondo il GDPR (Regolamento UE 2016/679), hai il diritto di:</p>
+          <ul class="list-disc pl-5 mt-4 space-y-2">
+            <li>
+              Chiedere l'accesso ai tuoi dati, la rettifica o la cancellazione.
+            </li>
+            <li>Opporti al trattamento o chiederne la limitazione.</li>
+            <li>Revocare il consenso in qualsiasi momento.</li>
+          </ul>
+          <p class="mt-4">
+            Per esercitare questi diritti, basta inviare una semplice email a <a
+              href="mailto:info@tiaiutoconlebollette.it"
+              class="text-orange font-bold hover:underline"
+              >info@tiaiutoconlebollette.it</a
+            >.
+          </p>
+        </section>
+
+        <div
+          class="pt-10 border-t border-gray-100 italic text-sm text-gray-400"
+        >
+          Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <a
+          href="/"
+          class="text-navy font-black uppercase tracking-widest text-xs flex items-center gap-2 hover:text-orange transition-colors"
+        >
+          ← Torna alla Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

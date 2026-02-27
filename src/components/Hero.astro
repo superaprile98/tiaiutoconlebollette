@@ -1,78 +1,204 @@
 ---
 ---
-  <section class="bg-cream pt-24 pb-0 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 items-end">
-      <!-- Left -->
-      <div class="py-10 md:py-16">
+
+<section
+  class="bg-cream pt-32 pb-20 overflow-hidden relative min-h-[85vh] flex items-center"
+>
+  <!-- Watermark Background Logo -->
+  <div
+    class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[15%] pointer-events-none z-0"
+  >
+    <img
+      src="/logo.webp"
+      alt=""
+      class="w-[800px] md:w-[1200px] lg:w-[1300px] opacity-[0.08]"
+    />
+  </div>
+
+  <!-- Glow effect -->
+  <div
+    class="absolute right-1/4 top-1/4 w-96 h-96 bg-orange/5 rounded-full blur-[120px] pointer-events-none"
+  >
+  </div>
+
+  <div class="max-w-6xl mx-auto px-5 relative z-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left Content -->
+      <div class="py-10 md:py-20 text-balance">
         <div
-          class="au inline-flex items-center gap-2 bg-orange-light text-orange text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-          <span class="w-1.5 h-1.5 bg-orange rounded-full pulse"></span>
+          class="au inline-flex items-center gap-2 bg-navy/5 text-navy text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-lg mb-8 border border-navy/10"
+        >
+          <span class="w-1.5 h-1.5 bg-orange rounded-full"></span>
           Empolese Valdelsa · Toscana
         </div>
-        <h1 class="au1 text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight mb-5">
-          Paghi troppo<br>per <span class="text-blue">luce e gas?</span><br>
-          <span class="text-orange">Lo risolviamo.</span>
+        <h1
+          class="au1 text-5xl md:text-7xl font-black text-navy leading-[1.05] tracking-tight mb-8"
+        >
+          L'energia è una<br />questione di <span class="text-orange"
+            >fiducia.</span
+          >
         </h1>
-        <p class="au2 text-base md:text-lg text-gray-500 font-light leading-relaxed mb-8 max-w-md">
-          Analizzo gratuitamente i tuoi contratti, trovo il fornitore più conveniente e gestisco tutta la burocrazia.
-          <strong class="text-gray-700 font-semibold">Tu non fai nulla.</strong>
+        <p
+          class="au2 text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-10 max-w-md"
+        >
+          Più che un semplice cambio fornitore, una consulenza basata sulla
+          <strong class="text-navy font-bold">stima professionale</strong> e sulla
+          trasparenza totale. Ti aiuto a navigare nel mercato energetico con un volto
+          familiare.
         </p>
-        <div class="au3 flex flex-wrap gap-3 mb-10">
-          <a href="#contatti"
-            class="bg-orange hover:bg-orange-dark text-white font-bold px-6 py-3.5 rounded-full text-sm transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md">
-            Richiedi consulenza gratuita →
+        <div class="au3 flex flex-wrap gap-4 mb-16">
+          <a
+            href="#contatti"
+            class="bg-navy hover:bg-orange text-white font-black px-10 py-5 rounded-2xl text-sm uppercase tracking-widest transition-all shadow-2xl shadow-navy/20 hover:shadow-orange/20"
+          >
+            Inizia Ora
           </a>
-          <a href="#servizi"
-            class="border border-gray-200 text-gray-700 hover:border-blue hover:text-blue font-medium px-6 py-3.5 rounded-full text-sm transition-colors">
-            Come funziona
+          <a
+            href="#servizi"
+            class="bg-white border border-gray-100 text-navy hover:bg-gray-50 font-black px-10 py-5 rounded-2xl text-sm uppercase tracking-widest transition-all"
+          >
+            Scopri i Servizi
           </a>
         </div>
-        <!-- Numeri -->
-        <div class="au3 flex gap-8 pt-6 border-t border-gray-200">
+
+        <!-- Numeri di Fiducia -->
+        <div class="au3 flex gap-10 pt-10 border-t border-gray-100">
           <div>
-            <div class="text-2xl font-extrabold text-orange">100%</div>
-            <div class="text-xs text-gray-400 mt-0.5">Gratuito per te</div>
+            <div class="text-3xl font-black text-navy">100%</div>
+            <div
+              class="text-[9px] text-orange font-black uppercase tracking-widest mt-1"
+            >
+              Etico
+            </div>
           </div>
           <div>
-            <div class="text-2xl font-extrabold text-blue">–20%</div>
-            <div class="text-xs text-gray-400 mt-0.5">Risparmio medio</div>
+            <div class="text-3xl font-black text-navy">Diretto</div>
+            <div
+              class="text-[9px] text-orange font-black uppercase tracking-widest mt-1"
+            >
+              Senza Call Center
+            </div>
           </div>
           <div>
-            <div class="text-2xl font-extrabold text-green">14gg</div>
-            <div class="text-xs text-gray-400 mt-0.5">Diritto di recesso</div>
+            <div class="text-3xl font-black text-navy">Locale</div>
+            <div
+              class="text-[9px] text-orange font-black uppercase tracking-widest mt-1"
+            >
+              Vicino a Te
+            </div>
           </div>
         </div>
       </div>
-      <!-- Right: foto -->
-      <div class="relative flex justify-center md:justify-end items-end h-full pt-8 md:pt-0">
-        <!-- Badge Google flottante -->
-        <div
-          class="absolute top-8 right-0 md:right-4 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-2 z-10">
-          <div class="text-yellow-400 text-sm">★★★★★</div>
-          <div>
-            <div class="text-xs font-bold text-gray-800">Recensioni Google</div>
-            <div class="text-xs text-gray-400">5.0 · Empolese Valdelsa</div>
+
+      <!-- Right: Professional Trust Card -->
+      <div class="hidden lg:flex justify-end relative">
+        <div class="relative group">
+          <!-- Card principals -->
+          <div
+            class="bg-navy rounded-[40px] shadow-[0_32px_64px_-16px_rgba(0,18,51,0.5)] p-10 border border-white/5 w-[400px] relative z-10 transition-all duration-700 hover:-translate-y-2 group-hover:shadow-orange/10"
+          >
+            <h3 class="text-2xl font-black text-white mb-6 leading-tight">
+              Il valore del <span class="text-orange">rapporto</span> umano.
+            </h3>
+
+            <ul class="space-y-6 mb-10">
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-orange/20 text-orange flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3.5 h-3.5 fill-current"
+                    viewBox="0 0 24 24"
+                    ><path
+                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-sm text-white/60 font-light leading-snug">
+                  <strong class="text-white font-bold"
+                    >Stima professionale:</strong
+                  > Costruiamo un rapporto che dura nel tempo, non un semplice contratto.
+                </p>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-orange/20 text-orange flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3.5 h-3.5 fill-current"
+                    viewBox="0 0 24 24"
+                    ><path
+                      d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-sm text-white/60 font-light leading-snug">
+                  <strong class="text-white font-bold">Zero Pressione:</strong> Ti
+                  offro la mia analisi, ma sei tu a decidere. Senza forzature.
+                </p>
+              </li>
+              <li class="flex items-start gap-4">
+                <div
+                  class="w-6 h-6 rounded-full bg-orange/20 text-orange flex items-center justify-center shrink-0 mt-0.5"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3.5 h-3.5 fill-current"
+                    viewBox="0 0 24 24"
+                    ><path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="text-sm text-white/60 font-light leading-snug">
+                  <strong class="text-white font-bold"
+                    >Ci metto la faccia:</strong
+                  > Resto il tuo unico referente diretto per qualsiasi dubbio o problema
+                  futuro.
+                </p>
+              </li>
+            </ul>
+
+            <div class="pt-8 border-t border-white/5 flex items-center gap-4">
+              <div class="flex -space-x-2">
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-navy bg-orange"
+                >
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-navy bg-orange-light/40"
+                >
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-navy bg-white/20"
+                >
+                </div>
+              </div>
+              <div
+                class="text-[10px] font-bold text-white/20 uppercase tracking-widest text-pretty"
+              >
+                Consulenza etica operante in Toscana
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative back elements -->
+          <div
+            class="absolute -top-10 -right-10 w-40 h-40 bg-orange/10 rounded-full blur-3xl -z-10 animate-pulse"
+          >
+          </div>
+          <div
+            class="absolute -bottom-10 -left-10 w-40 h-40 bg-navy/5 rounded-full blur-3xl -z-10"
+          >
           </div>
         </div>
-        <!-- Card "come funziona" flottante -->
-        <div
-          class="absolute bottom-12 left-0 md:-left-4 bg-white rounded-2xl shadow-lg p-4 z-10 max-w-xs hidden md:block">
-          <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Come funziona</div>
-          <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-2"><span
-                class="w-6 h-6 bg-blue-light text-blue text-xs font-bold rounded-lg flex items-center justify-center flex-shrink-0">1</span><span
-                class="text-xs text-gray-700 font-medium">Mandi la bolletta</span></div>
-            <div class="flex items-center gap-2"><span
-                class="w-6 h-6 bg-orange-light text-orange text-xs font-bold rounded-lg flex items-center justify-center flex-shrink-0">2</span><span
-                class="text-xs text-gray-700 font-medium">Trovo le offerte migliori</span></div>
-            <div class="flex items-center gap-2"><span
-                class="w-6 h-6 bg-green-light text-green text-xs font-bold rounded-lg flex items-center justify-center flex-shrink-0">3</span><span
-                class="text-xs text-gray-700 font-medium">Gestisco tutto io</span></div>
-          </div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
-          alt="Stefano Moretti – Consulente Energia" class="w-72 md:w-80 lg:w-96 object-cover object-top rounded-t-3xl"
-          style="max-height:480px" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  /* Pulizia stili non necessari */
+</style>

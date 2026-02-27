@@ -1,79 +1,130 @@
 ---
 ---
-<nav id="navbar"
-  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
-  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
+
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-gray-100/50 transition-all duration-500"
+>
+  <div
+    class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-8"
+  >
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-3 flex-shrink-0">
-      <img src="./logo.webp" alt="Ti Aiuto Con Le Bollette" class="w-10 h-10 rounded-full object-cover" />
+    <a href="#" class="flex items-center gap-4 shrink-0 group">
+      <img
+        src="/logo.webp"
+        alt="Stefano Moretti Logo"
+        class="w-10 h-10 md:w-12 md:h-12 rounded-xl object-cover shadow-lg group-hover:scale-105 transition-transform duration-500"
+      />
       <div class="hidden sm:block">
-        <div class="font-bold text-gray-900 text-sm leading-tight">Ti Aiuto Con Le Bollette</div>
-        <div class="text-xs text-gray-400 font-normal">Stefano Moretti · Consulente Energia</div>
+        <div
+          class="font-black text-navy text-sm md:text-base tracking-tighter leading-none mb-1"
+        >
+          Stefano Moretti
+        </div>
+        <div
+          class="text-[9px] md:text-[10px] text-orange font-black uppercase tracking-[0.2em]"
+        >
+          Consulente Energetico
+        </div>
       </div>
     </a>
+
     <!-- Links desktop -->
     <div class="hidden md:flex items-center gap-1">
-      <a href="#chi-sono"
-        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Chi
-        sono</a>
-      <a href="#servizi"
-        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Servizi</a>
-      <a href="#perche"
-        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">Perché
-        scegliermi</a>
-      <a href="#faq"
-        class="text-gray-600 hover:text-blue text-sm font-medium px-3 py-2 rounded-lg hover:bg-blue-light transition-colors">FAQ</a>
+      {
+        ["Chi sono", "Servizi", "Perché", "FAQ"].map((item) => (
+          <a
+            href={`#${item.toLowerCase().replace(" ", "-")}`}
+            class="px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-navy/60 hover:text-orange transition-all duration-300 relative group"
+          >
+            {item}
+            <span class="absolute bottom-1 left-4 right-4 h-0.5 bg-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+          </a>
+        ))
+      }
     </div>
-    <!-- CTA + hamburger -->
-    <div class="flex items-center gap-3">
-      <a href="#contatti"
-        class="bg-orange hover:bg-orange-dark text-white text-sm font-semibold px-4 py-2.5 rounded-full transition-colors whitespace-nowrap">
-        Consulenza gratuita
+
+    <!-- CTA & Mobile Toggle -->
+    <div class="flex items-center gap-4">
+      <a
+        href="#contatti"
+        class="hidden sm:flex bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest px-6 py-3 rounded-xl transition-all duration-500 shadow-xl shadow-navy/10 hover:shadow-orange/20"
+      >
+        Consulenza
       </a>
-      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-1">
-        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
-        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
-        <span class="block w-5 h-0.5 bg-gray-700 rounded transition-all"></span>
+
+      <button
+        id="hamburger"
+        class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-gray-50 rounded-xl transition-colors active:scale-95"
+      >
+        <span
+          class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300"
+        ></span>
+        <span
+          class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300"
+        ></span>
+        <span
+          class="block w-5 h-0.5 bg-navy rounded-full transition-all duration-300"
+        ></span>
       </button>
     </div>
   </div>
+
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-5 py-4 flex flex-col gap-2">
-    <a href="#chi-sono" class="text-gray-700 font-medium py-2 border-b border-gray-50">Chi
-      sono</a>
-    <a href="#servizi" class="text-gray-700 font-medium py-2 border-b border-gray-50">Servizi</a>
-    <a href="#perche" class="text-gray-700 font-medium py-2 border-b border-gray-50">Perché
-      scegliermi</a>
-    <a href="#faq" class="text-gray-700 font-medium py-2">FAQ</a>
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100 flex-col py-6"
+  >
+    {
+      ["Chi sono", "Servizi", "Perché", "FAQ", "Contatti"].map((item) => (
+        <a
+          href={`#${item.toLowerCase().replace(" ", "-")}`}
+          class="px-8 py-4 text-xs font-black uppercase tracking-widest text-navy border-b border-gray-50 last:border-0 active:bg-gray-50 transition-colors"
+        >
+          {item}
+        </a>
+      ))
+    }
   </div>
 </nav>
 
 <script>
-  // Navbar shadow on scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
+  const navbar = document.getElementById("navbar");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerBtn = document.getElementById("hamburger");
+  const spans = hamburgerBtn?.querySelectorAll("span");
+
+  window.addEventListener("scroll", () => {
     if (navbar) {
-      navbar.classList.toggle('nav-scrolled', window.scrollY > 10);
+      if (window.scrollY > 50) {
+        navbar.classList.add("py-2", "shadow-2xl", "shadow-navy/5");
+        navbar.classList.remove("py-4");
+      } else {
+        navbar.classList.remove("py-2", "shadow-2xl", "shadow-navy/5");
+        navbar.classList.add("py-4");
+      }
     }
   });
 
-  // Mobile nav
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerBtn = document.getElementById('hamburger');
-  
-  if (hamburgerBtn) {
-    hamburgerBtn.addEventListener('click', () => {
-      if (mobileMenu) mobileMenu.classList.toggle('hidden');
+  if (hamburgerBtn && mobileMenu && spans) {
+    hamburgerBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+
+      // Basic animate icon
+      spans[0].classList.toggle("rotate-45");
+      spans[0].classList.toggle("translate-y-2");
+      spans[1].classList.toggle("opacity-0");
+      spans[2].classList.toggle("-rotate-45");
+      spans[2].classList.toggle("-translate-y-2");
     });
   }
 
   // Close mobile menu when clicking a link
-  const mobileLinks = mobileMenu?.querySelectorAll('a');
-  if (mobileLinks) {
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+      mobileMenu?.classList.remove("flex");
     });
-  }
+  });
 </script>

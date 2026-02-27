@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Cookie Policy | Stefano Moretti">
+  <Navbar />
+
+  <main class="pt-32 pb-20 bg-cream min-h-screen">
+    <div class="max-w-3xl mx-auto px-5">
+      <h1 class="text-4xl font-black text-navy mb-10 tracking-tight">
+        Cookie Policy
+      </h1>
+
+      <div
+        class="prose prose-slate prose-navy max-w-none space-y-10 text-gray-600 font-light leading-relaxed"
+      >
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            Cosa sono i cookie
+          </h2>
+          <p>
+            I cookie sono piccoli file di testo che i siti visitati dagli utenti
+            inviano ai loro terminali, dove vengono memorizzati per essere poi
+            ritrasmessi agli stessi siti alla visita successiva.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            Uso dei cookie su questo sito
+          </h2>
+          <p>
+            Questo sito utilizza esclusivamente <strong>cookie tecnici</strong> necessari
+            al corretto funzionamento della piattaforma. Questi cookie non raccolgono
+            informazioni personali e non richiedono il consenso preventivo per essere
+            installati.
+          </p>
+          <p class="mt-4">
+            Al momento <strong>non</strong> sono attivi cookie di profilazione o
+            cookie di terze parti (come Facebook Pixel, Google Analytics avanzato
+            o altri sistemi di tracciamento) per finalità di marketing o analisi
+            comportamentale.
+          </p>
+        </section>
+
+        <section>
+          <h2
+            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
+          >
+            Cookie di terze parti
+          </h2>
+          <p>
+            Questo sito è progettato per essere il più leggero e rispettoso
+            della privacy possibile. Qualora in futuro vengano integrati servizi
+            di terze parti che richiedono l'uso di cookie di profilazione,
+            questa policy verrà aggiornata e ti verrà richiesto il consenso
+            esplicito tramite un apposito banner.
+          </p>
+        </section>
+
+        <div
+          class="pt-10 border-t border-gray-100 italic text-sm text-gray-400"
+        >
+          Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <a
+          href="/"
+          class="text-navy font-black uppercase tracking-widest text-xs flex items-center gap-2 hover:text-orange transition-colors"
+        >
+          ← Torna alla Home
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

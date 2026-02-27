@@ -1,50 +1,106 @@
 ---
 ---
-  <section id="chi-sono" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center">
-      <!-- Immagine -->
-      <div class="fade relative">
-        <div class="bg-cream-dark rounded-3xl overflow-hidden aspect-[4/5] relative">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Stefano Moretti"
-            class="w-full h-full object-cover object-top" />
-          <!-- Badge disponibile -->
-          <div
-            class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-2 whitespace-nowrap">
-            <span class="w-2 h-2 bg-green rounded-full pulse"></span>
-            <span class="text-sm font-semibold text-gray-800">Disponibile ora</span>
-            <span class="text-xs text-gray-400">· Empolese Valdelsa</span>
-          </div>
-        </div>
-        <!-- Decorazione -->
-        <div class="absolute -top-4 -left-4 w-20 h-20 bg-orange-light rounded-2xl -z-10"></div>
-        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-light rounded-2xl -z-10"></div>
-      </div>
-      <!-- Testo -->
-      <div class="fade d1">
+
+<section id="chi-sono" class="py-24 bg-navy relative overflow-hidden">
+  <!-- Decorative Background Glow -->
+  <div
+    class="absolute top-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl pointer-events-none -mr-48 -mt-48"
+  >
+  </div>
+
+  <div
+    class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-16 items-center relative z-10"
+  >
+    <!-- Immagine -->
+    <div class="fade relative">
+      <div
+        class="bg-white/5 rounded-[40px] overflow-hidden aspect-4/5 relative border border-white/10"
+      >
+        <img
+          src="/stefano.png"
+          alt="Stefano Moretti"
+          class="w-full h-full object-cover object-top filter grayscale-20 hover:grayscale-0 transition-all duration-700"
+        />
+        <!-- Badge disponibile -->
         <div
-          class="inline-block bg-blue-light text-blue text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-          Chi sono</div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-5">
-          Un consulente locale,<br>non un call center.
-        </h2>
-        <p class="text-gray-500 leading-relaxed mb-4 font-light">Mi chiamo <strong
-            class="text-gray-800 font-semibold">Stefano Moretti</strong>. Sono un agente di commercio specializzato in
-          utenze energetiche, operativo nell'<strong class="text-gray-800 font-semibold">Empolese Valdelsa</strong> e in
-          tutta la Toscana.</p>
-        <p class="text-gray-500 leading-relaxed mb-4 font-light">Il mio approccio è semplice: ti spiego con parole
-          chiare cosa stai pagando e ti aiuto a pagare meno — senza forzarti verso nessuna scelta. <strong
-            class="text-gray-800 font-semibold">La decisione è sempre tua.</strong></p>
-        <p class="text-gray-500 leading-relaxed mb-6 font-light">A differenza degli operatori telefonici, <strong
-            class="text-gray-800 font-semibold">sono una persona fisica</strong>. Possiamo incontrarci di persona,
-          chiamarci o scriverci. E sono disponibile anche dopo la firma.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">🏠 Privati</span>
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">🏢 Aziende</span>
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">🏪 PMI & Negozi</span>
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">⚡ Luce</span>
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">🔥 Gas</span>
-          <span class="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full">📍 Toscana</span>
+          class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-navy/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl px-5 py-3 flex items-center gap-3 whitespace-nowrap"
+        >
+          <span
+            class="w-2.5 h-2.5 bg-[#25D366] rounded-full animate-pulse shadow-[0_0_10px_#25D366]"
+          ></span>
+          <span class="text-sm font-bold text-white">Disponibile ora</span>
+          <span class="text-xs text-white/40">· Empolese Valdelsa</span>
         </div>
+      </div>
+      <!-- Decorazione -->
+      <div
+        class="absolute -top-6 -left-6 w-24 h-24 bg-orange/10 rounded-3xl -z-10 blur-sm"
+      >
+      </div>
+      <div
+        class="absolute -bottom-6 -right-6 w-32 h-32 bg-navy-light/20 rounded-3xl -z-10"
+      >
       </div>
     </div>
-  </section>
+    <!-- Testo -->
+    <div class="fade d1">
+      <div
+        class="inline-block bg-white/10 text-orange text-xs font-black uppercase tracking-widest px-5 py-2 rounded-full mb-8 border border-white/5"
+      >
+        Chi sono
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-[1.1] mb-8">
+        Trasparenza e valore<br /><span class="text-orange">per la tua</span> energia.
+      </h2>
+      <div class="space-y-6">
+        <p class="text-white/70 leading-relaxed text-lg font-light">
+          Mi chiamo <strong class="text-white font-bold">Stefano Moretti</strong
+          >. Oltre ad un consulente, cerco di essere una <strong
+            class="text-white font-bold">risorsa trasparente</strong
+          > per le persone che scelgono di affidarsi alla mia competenza nell'Empolese
+          Valdelsa.
+        </p>
+        <p
+          class="text-white/60 leading-relaxed text-base font-light italic border-l-2 border-orange/30 pl-6"
+        >
+          "Il mio lavoro è proteggere la tua tranquillità energetica. In un
+          mondo di offerte aggressive, io punto sulla chiarezza e su un rapporto
+          umano che non teme confronti."
+        </p>
+        <p class="text-white/70 leading-relaxed text-base font-light">
+          A differenza della freddezza dei call center, <strong
+            class="text-white font-bold"
+            >offro una presenza costante e diretta</strong
+          >. Costruisco con i miei clienti un legame basato sulla stima
+          reciproca, diventando il loro punto di riferimento per ogni necessità.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 mt-10">
+        <span
+          class="bg-white/5 border border-white/10 text-white/50 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >🏠 Privati</span
+        >
+        <span
+          class="bg-white/5 border border-white/10 text-white/50 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >🏢 Aziende</span
+        >
+        <span
+          class="bg-white/5 border border-white/10 text-white/50 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >🏪 PMI & Negozi</span
+        >
+        <span
+          class="bg-white/5 border border-orange/20 text-orange/60 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >⚡ Luce</span
+        >
+        <span
+          class="bg-white/5 border border-orange/20 text-orange/60 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >🔥 Gas</span
+        >
+        <span
+          class="bg-white/5 border border-white/10 text-white/50 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl"
+          >📍 Toscana</span
+        >
+      </div>
+    </div>
+  </div>
+</section>
