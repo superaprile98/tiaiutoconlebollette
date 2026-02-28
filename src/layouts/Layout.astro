@@ -36,6 +36,10 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="canonical"
+      href={`https://www.tiaiutoconlebollette.it${Astro.url.pathname}`}
+    />
   </head>
   <body class="bg-white font-sans text-gray-800 overflow-x-hidden">
     <slot />
