@@ -2,17 +2,19 @@ import { defineMiddleware } from "astro:middleware";
 
 export const onRequest = defineMiddleware((context, next) => {
   const url = new URL(context.request.url);
+  const hostname = url.hostname;
   
-  // Se l'utente accede tramite il dominio .com (con o senza www)
-  if (url.hostname.includes("tiaiutoconlebollette.com")) {
-    // Forza il redirect verso la versione principale .it con www
+  // 1. Redirect dal dominio .com (con o senza www) al .it con www
+  if (hostname.includes("tiaiutoconlebollette.com")) {
     url.hostname = "www.tiaiutoconlebollette.it";
-    
-    // Ritorna un redirect 301 (Permanente). 
-    // Mantiene anche il percorso (es. .com/contatti -> .it/contatti)
     return context.redirect(url.toString(), 301);
   }
 
-  // Altrimenti procedi normalmente con la richiesta
+  // 2. Forza il www sul dominio .it principale (es. tiaiutoconlebollette.it -> www.tiaiutoconlebollette.it)
+  if (hostname === "tiaiutoconlebollette.it") {
+    url.hostname = "www.tiaiutoconlebollette.it";
+    return context.redirect(url.toString(), 301);
+  }
+
   return next();
 });
