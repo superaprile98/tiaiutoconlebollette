@@ -9,7 +9,7 @@
     class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-8"
   >
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-4 shrink-0 group">
+    <a href="/" class="flex items-center gap-4 shrink-0 group">
       <img
         src="/logo.webp"
         alt="Stefano Moretti Logo"
@@ -28,10 +28,10 @@
     <div class="hidden md:flex items-center gap-1">
       {
         [
-          { label: "Chi siamo", href: "#chi-sono" },
-          { label: "Servizi", href: "#servizi" },
-          { label: "Perché noi", href: "#perche" },
-          { label: "FAQ", href: "#faq" },
+          { label: "Chi siamo", href: "/#chi-sono" },
+          { label: "Servizi", href: "/#servizi" },
+          { label: "Perché noi", href: "/#perche" },
+          { label: "FAQ", href: "/#faq" },
         ].map((item) => (
           <a
             href={item.href}
@@ -47,7 +47,7 @@
     <!-- CTA & Mobile Toggle -->
     <div class="flex items-center gap-4">
       <a
-        href="#contatti"
+        href="/#contatti"
         class="hidden sm:flex bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest px-6 py-3 rounded-xl transition-all duration-500 shadow-xl shadow-navy/10 hover:shadow-orange/20"
       >
         Contattaci
@@ -76,11 +76,11 @@
   >
     {
       [
-        { label: "Chi siamo", href: "#chi-sono" },
-        { label: "Servizi", href: "#servizi" },
-        { label: "Perché noi", href: "#perche" },
-        { label: "FAQ", href: "#faq" },
-        { label: "Contatti", href: "#contatti" },
+        { label: "Chi siamo", href: "/#chi-sono" },
+        { label: "Servizi", href: "/#servizi" },
+        { label: "Perché noi", href: "/#perche" },
+        { label: "FAQ", href: "/#faq" },
+        { label: "Contatti", href: "/#contatti" },
       ].map((item) => (
         <a
           href={item.href}

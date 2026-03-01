@@ -9,6 +9,16 @@ import Footer from "../components/Footer.astro";
 
   <main class="pt-32 pb-20 bg-cream min-h-screen">
     <div class="max-w-3xl mx-auto px-5">
+      <div class="mb-8">
+        <a
+          href="/"
+          class="text-navy/40 font-black uppercase tracking-widest text-[10px] flex items-center gap-2 hover:text-orange transition-all group"
+        >
+          <span class="group-hover:-translate-x-1 transition-transform">←</span>
+          Torna alla Home
+        </a>
+      </div>
+
       <h1 class="text-4xl font-black text-navy mb-10 tracking-tight">
         Cookie Policy
       </h1>
@@ -69,15 +79,6 @@ import Footer from "../components/Footer.astro";
         >
           Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
         </div>
-      </div>
-
-      <div class="mt-20">
-        <a
-          href="/"
-          class="text-navy font-black uppercase tracking-widest text-xs flex items-center gap-2 hover:text-orange transition-colors"
-        >
-          ← Torna alla Home
-        </a>
       </div>
     </div>
   </main>

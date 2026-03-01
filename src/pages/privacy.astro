@@ -9,6 +9,16 @@ import Footer from "../components/Footer.astro";
 
   <main class="pt-32 pb-20 bg-cream min-h-screen">
     <div class="max-w-3xl mx-auto px-5">
+      <div class="mb-8">
+        <a
+          href="/"
+          class="text-navy/40 font-black uppercase tracking-widest text-[10px] flex items-center gap-2 hover:text-orange transition-all group"
+        >
+          <span class="group-hover:-translate-x-1 transition-transform">←</span>
+          Torna alla Home
+        </a>
+      </div>
+
       <h1 class="text-4xl font-black text-navy mb-10 tracking-tight">
         Privacy Policy
       </h1>
@@ -27,11 +37,10 @@ import Footer from "../components/Footer.astro";
           > (nella persona di Stefano Moretti), con sede operativa a Empoli e Provincia,
           Toscana. Per qualsiasi domanda relativa alla privacy, puoi scriverci a:
           <a
-            href="mailto:info@tiaiutoconlebollette.it"
+            href="mailto:tiaiutoconlebollette@gmail.com"
             class="text-orange font-bold hover:underline"
-            >info@tiaiutoconlebollette.it</a
+            >tiaiutoconlebollette@gmail.com</a
           >.
-
         </section>
 
         <section>
@@ -106,9 +115,9 @@ import Footer from "../components/Footer.astro";
           </ul>
           <p class="mt-4">
             Per esercitare questi diritti, basta inviare una semplice email a <a
-              href="mailto:info@tiaiutoconlebollette.it"
+              href="mailto:tiaiutoconlebollette@gmail.com"
               class="text-orange font-bold hover:underline"
-              >info@tiaiutoconlebollette.it</a
+              >tiaiutoconlebollette@gmail.com</a
             >.
           </p>
         </section>
@@ -118,15 +127,6 @@ import Footer from "../components/Footer.astro";
         >
           Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
         </div>
-      </div>
-
-      <div class="mt-20">
-        <a
-          href="/"
-          class="text-navy font-black uppercase tracking-widest text-xs flex items-center gap-2 hover:text-orange transition-colors"
-        >
-          ← Torna alla Home
-        </a>
       </div>
     </div>
   </main>
