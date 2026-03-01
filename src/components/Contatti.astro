@@ -155,16 +155,22 @@ let formStatus: "idle" | "success" | "error" = "idle";
               <label
                 for="user_contact"
                 class="text-xs font-black text-navy uppercase tracking-widest px-1"
-                >Email o Telefono</label
+                >Email</label
               >
               <input
                 id="user_contact"
-                type="text"
+                type="email"
                 name="contact"
                 placeholder="mario@email.it"
                 required
                 class="bg-white border border-gray-100 rounded-2xl px-5 py-4 text-sm text-gray-800 outline-none focus:border-orange focus:ring-4 focus:ring-orange/5 transition placeholder:text-gray-300 shadow-sm"
               />
+              <span
+                id="email-format-error"
+                class="hidden text-[10px] text-red-500 font-bold px-1 -mt-1"
+              >
+                Inserisci un indirizzo email valido (es. nome@dominio.it)
+              </span>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -230,7 +236,8 @@ let formStatus: "idle" | "success" | "error" = "idle";
             id="form-error"
             class="text-red-500 text-xs font-bold text-center hidden"
           >
-            Si è verificato un errore. Riprova o scrivi direttamente via mail.
+            Si è verificato un errore tecnico. Riprova o scrivi direttamente via
+            mail.
           </div>
 
           <button
@@ -276,10 +283,39 @@ let formStatus: "idle" | "success" | "error" = "idle";
   const submitSpinner = document.getElementById("submit-spinner");
   const formError = document.getElementById("form-error");
   const formOk = document.getElementById("form-ok");
+  const emailInput = document.getElementById(
+    "user_contact",
+  ) as HTMLInputElement;
+  const emailFormatError = document.getElementById("email-format-error");
+
+  function validateEmail(email: string) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+
+  // Clear error on input
+  if (emailInput) {
+    emailInput.addEventListener("input", () => {
+      emailInput.classList.remove(
+        "border-red-500",
+        "ring-4",
+        "ring-red-500/10",
+      );
+      if (emailFormatError) emailFormatError.classList.add("hidden");
+    });
+  }
 
   if (cform) {
     cform.addEventListener("submit", async (e) => {
       e.preventDefault(); // Prevents page reload!
+
+      // Validazione Email lato client
+      if (emailInput && !validateEmail(emailInput.value)) {
+        emailInput.classList.add("border-red-500", "ring-4", "ring-red-500/10");
+        if (emailFormatError) emailFormatError.classList.remove("hidden");
+        emailInput.focus();
+        return;
+      }
 
       // Resetta stato errore visivo
       if (formError) formError.classList.add("hidden");
