@@ -22,6 +22,10 @@ const { title } = Astro.props;
     />
 
     <!-- Open Graph / Facebook / WhatsApp -->
+    <meta
+      property="og:url"
+      content={`https://www.tiaiutoconlebollette.it${Astro.url.pathname}`}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Ti aiuto con le bollette" />
     <meta property="og:title" content={title} />
@@ -29,7 +33,12 @@ const { title } = Astro.props;
       property="og:description"
       content="Consulenza energetica professionale e trasparente a Empoli e Provincia. Diamo un volto umano alla tua bolletta."
     />
-    <meta property="og:image" content="/logo.webp" />
+    <meta
+      property="og:image"
+      content="https://www.tiaiutoconlebollette.it/logo.webp"
+    />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,7 +78,7 @@ const { title } = Astro.props;
             inLanguage: "it-IT",
           },
           {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "ProfessionalService"],
             name: "Ti aiuto con le bollette | Consulenza Luce e Gas",
             image: "https://www.tiaiutoconlebollette.it/logo.webp",
             url: "https://www.tiaiutoconlebollette.it",
@@ -77,16 +86,23 @@ const { title } = Astro.props;
             email: "tiaiutoconlebollette@gmail.com",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Empoli e Provincia",
               addressLocality: "Empoli",
               addressRegion: "FI",
-              postalCode: "50053",
               addressCountry: "IT",
             },
             geo: {
               "@type": "GeoCoordinates",
               latitude: 43.717,
               longitude: 10.942,
+            },
+            serviceArea: {
+              "@type": "GeoCircle",
+              geoMidpoint: {
+                "@type": "GeoCoordinates",
+                latitude: 43.717,
+                longitude: 10.942,
+              },
+              geoRadius: "50000",
             },
             description:
               "Consulenza energetica per ottimizzare e risparmiare sulle bollette di luce e gas. Analisi contratti mercato libero e revisione costi per privati e aziende (P.IVA) a Empoli, Firenze e Toscana.",
