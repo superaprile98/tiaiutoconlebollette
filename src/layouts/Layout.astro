@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import CookieBanner from "../components/CookieBanner.astro";
+
 
 interface Props {
   title: string;
@@ -154,9 +156,36 @@ const { title } = Astro.props;
         ],
       })}
     ></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CCHVPRWYFD"
+      is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // Default consent state
+      const consent = localStorage.getItem("cookie-consent");
+      gtag("consent", "default", {
+        ad_storage: consent === "granted" ? "granted" : "denied",
+        analytics_storage: consent === "granted" ? "granted" : "denied",
+        ad_user_data: consent === "granted" ? "granted" : "denied",
+        ad_personalization: consent === "granted" ? "granted" : "denied",
+      });
+
+      gtag("js", new Date());
+      gtag("config", "G-CCHVPRWYFD");
+    </script>
   </head>
+
   <body class="bg-white font-sans text-gray-800 overflow-x-hidden">
     <slot />
+    <CookieBanner />
+
 
     <script>
       // Scroll reveal with IntersectionObserver

@@ -7,10 +7,8 @@
   style="animation: fadeUp .4s 1.2s ease both; opacity:0"
 >
   <p class="text-sm text-gray-500 leading-relaxed font-medium">
-    Usiamo solo cookie tecnici necessari al funzionamento. Nessun dato ceduto a
-    terzi. <a href="/cookie" class="text-orange font-bold hover:underline"
-      >Cookie policy</a
-    >.
+    Utilizziamo cookie per migliorare la tua esperienza e per fini analitici. 
+    Leggi la nostra <a href="/cookie" class="text-orange font-bold hover:underline">Cookie policy</a>.
   </p>
   <div class="flex flex-col w-full gap-3">
     <button
@@ -26,25 +24,34 @@
   </div>
 </div>
 
-<script>
-  // Cookie Banner
+<script is:inline>
+  // Cookie Banner handling
   const cookieEl = document.getElementById("cookie");
-  const acceptBtns = cookieEl?.querySelectorAll("button");
+  const acceptAllBtn = document.getElementById("accept-cookies");
+  const acceptNecessaryBtn = document.getElementById("accept-necessary-cookies");
+
+  function setConsent(status) {
+    localStorage.setItem("cookie-consent", status);
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': status,
+        'analytics_storage': status,
+        'ad_user_data': status,
+        'ad_personalization': status
+      });
+    }
+    if (cookieEl) cookieEl.style.display = "none";
+  }
 
   if (cookieEl) {
-    if (localStorage.getItem("ck") === "1") {
+    if (localStorage.getItem("cookie-consent")) {
       cookieEl.style.display = "none";
     } else {
       cookieEl.style.opacity = "1";
     }
 
-    if (acceptBtns) {
-      acceptBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          cookieEl.style.display = "none";
-          localStorage.setItem("ck", "1");
-        });
-      });
-    }
+    acceptAllBtn?.addEventListener("click", () => setConsent('granted'));
+    acceptNecessaryBtn?.addEventListener("click", () => setConsent('denied'));
   }
 </script>
+
