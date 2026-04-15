@@ -1,57 +1,202 @@
 ---
 ---
 
+<!-- Cookie Consent Banner — GDPR/ePrivacy compliant -->
 <div
-  id="cookie"
-  class="fixed bottom-32 md:bottom-12 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md border border-gray-100 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-6 md:p-8 flex flex-col items-center text-center gap-6 max-w-sm w-[calc(100%-2rem)] z-99999"
-  style="animation: fadeUp .4s 1.2s ease both; opacity:0"
+  id="cookie-banner"
+  class="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-[99999] w-[calc(100%-2rem)] max-w-xl"
+  style="opacity:0; pointer-events:none; transition: opacity .35s ease, transform .35s ease; transform: translateY(12px);"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Preferenze cookie"
 >
-  <p class="text-sm text-gray-500 leading-relaxed font-medium">
-    Utilizziamo cookie per migliorare la tua esperienza e per fini analitici. 
-    Leggi la nostra <a href="/cookie" class="text-orange font-bold hover:underline">Cookie policy</a>.
-  </p>
-  <div class="flex flex-col w-full gap-3">
+  <!-- Main panel -->
+  <div id="cookie-main" class="bg-white border border-gray-100 rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-6 md:p-8">
+    <div class="flex items-start gap-4 mb-5">
+      <div class="w-10 h-10 bg-orange/10 rounded-2xl flex items-center justify-center shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-orange" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      </div>
+      <div>
+        <p class="text-sm font-black text-navy mb-1">Questo sito usa i cookie</p>
+        <p class="text-xs text-gray-400 leading-relaxed font-light">
+          Utilizziamo cookie tecnici (necessari) e, con il tuo consenso, cookie analitici e di marketing per misurare le visite e migliorare i servizi.
+          Leggi la <a href="/cookie" class="text-orange font-bold hover:underline">Cookie Policy</a> e la <a href="/privacy" class="text-orange font-bold hover:underline">Privacy Policy</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-2">
+      <button
+        id="cookie-accept-all"
+        class="flex-1 bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest py-3.5 rounded-2xl transition-all duration-300 shadow-lg shadow-navy/10 hover:shadow-orange/20 cursor-pointer hover:scale-[1.02] active:scale-95"
+      >Accetta tutto</button>
+      <button
+        id="cookie-customize"
+        class="flex-1 border border-gray-200 text-navy/70 hover:border-navy hover:text-navy text-[11px] font-black uppercase tracking-widest py-3.5 rounded-2xl transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-95"
+      >Personalizza</button>
+      <button
+        id="cookie-reject-all"
+        class="flex-1 border border-gray-100 text-gray-400 hover:text-gray-600 text-[11px] font-black uppercase tracking-widest py-3.5 rounded-2xl transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-95"
+      >Solo necessari</button>
+    </div>
+  </div>
+
+  <!-- Customization panel (hidden by default) -->
+  <div id="cookie-detail" class="hidden bg-white border border-gray-100 rounded-[28px] shadow-[0_20px_60px_rgba(0,0,0,0.12)] p-6 md:p-8">
+    <button id="cookie-back" class="text-[10px] font-black uppercase tracking-widest text-navy/40 hover:text-orange flex items-center gap-1.5 mb-5 transition-colors">
+      <span>←</span> Indietro
+    </button>
+    <p class="text-sm font-black text-navy mb-4">Gestisci le preferenze</p>
+
+    <!-- Cookie category: Tecnici -->
+    <div class="flex items-center justify-between py-3.5 border-b border-gray-50">
+      <div>
+        <p class="text-sm font-bold text-navy">Tecnici (necessari)</p>
+        <p class="text-[11px] text-gray-400 font-light mt-0.5">Necessari per il funzionamento del sito. Non richiedono consenso.</p>
+      </div>
+      <div class="w-10 h-6 bg-navy rounded-full flex items-center px-1 shrink-0 cursor-not-allowed opacity-60">
+        <div class="w-4 h-4 bg-white rounded-full ml-auto"></div>
+      </div>
+    </div>
+
+    <!-- Cookie category: Analitici -->
+    <div class="flex items-center justify-between py-3.5 border-b border-gray-50">
+      <div>
+        <p class="text-sm font-bold text-navy">Analitici</p>
+        <p class="text-[11px] text-gray-400 font-light mt-0.5">Google Analytics — analisi anonima del traffico per migliorare il sito.</p>
+      </div>
+      <label class="relative w-10 h-6 cursor-pointer shrink-0">
+        <input type="checkbox" id="cookie-analytics" class="sr-only peer" />
+        <div class="w-10 h-6 bg-gray-200 rounded-full peer-checked:bg-navy transition-colors duration-300"></div>
+        <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-all duration-300 peer-checked:translate-x-4"></div>
+      </label>
+    </div>
+
+    <!-- Cookie category: Marketing -->
+    <div class="flex items-center justify-between py-3.5">
+      <div>
+        <p class="text-sm font-bold text-navy">Marketing e Pubblicità</p>
+        <p class="text-[11px] text-gray-400 font-light mt-0.5">Google Ads — misurazione conversioni e annunci pertinenti.</p>
+      </div>
+      <label class="relative w-10 h-6 cursor-pointer shrink-0">
+        <input type="checkbox" id="cookie-marketing" class="sr-only peer" />
+        <div class="w-10 h-6 bg-gray-200 rounded-full peer-checked:bg-navy transition-colors duration-300"></div>
+        <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-all duration-300 peer-checked:translate-x-4"></div>
+      </label>
+    </div>
+
     <button
-      id="accept-cookies"
-      class="w-full bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest py-4 rounded-2xl transition-all shadow-lg shadow-navy/10 hover:shadow-orange/20 cursor-pointer hover:scale-[1.02] active:scale-95"
-      >Accetta Tutto</button
-    >
-    <button
-      id="accept-necessary-cookies"
-      class="w-full border border-gray-100 text-gray-400 hover:text-navy hover:bg-gray-50 text-[11px] font-black uppercase tracking-widest py-4 rounded-2xl transition-all cursor-pointer hover:scale-[1.02] active:scale-95"
-      >Solo necessari</button
-    >
+      id="cookie-save"
+      class="w-full mt-5 bg-navy hover:bg-orange text-white text-[11px] font-black uppercase tracking-widest py-3.5 rounded-2xl transition-all duration-300 shadow-lg cursor-pointer hover:scale-[1.02] active:scale-95"
+    >Salva preferenze</button>
   </div>
 </div>
 
+<!-- Floating re-open button (shown after consent given) -->
+<button
+  id="cookie-reopen"
+  class="fixed bottom-6 left-6 z-[99998] hidden w-10 h-10 bg-white border border-gray-100 rounded-xl shadow-lg items-center justify-center text-navy/40 hover:text-orange hover:border-orange transition-all duration-300 hover:scale-110"
+  title="Gestisci preferenze cookie"
+  aria-label="Gestisci preferenze cookie"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+</button>
+
 <script is:inline>
-  // Cookie Banner handling
-  const cookieEl = document.getElementById("cookie");
-  const acceptAllBtn = document.getElementById("accept-cookies");
-  const acceptNecessaryBtn = document.getElementById("accept-necessary-cookies");
+(function () {
+  var banner = document.getElementById('cookie-banner');
+  var mainPanel = document.getElementById('cookie-main');
+  var detailPanel = document.getElementById('cookie-detail');
+  var btnAcceptAll = document.getElementById('cookie-accept-all');
+  var btnRejectAll = document.getElementById('cookie-reject-all');
+  var btnCustomize = document.getElementById('cookie-customize');
+  var btnBack = document.getElementById('cookie-back');
+  var btnSave = document.getElementById('cookie-save');
+  var reopenBtn = document.getElementById('cookie-reopen');
+  var chkAnalytics = document.getElementById('cookie-analytics');
+  var chkMarketing = document.getElementById('cookie-marketing');
 
-  function setConsent(status) {
-    localStorage.setItem("cookie-consent", status);
-    if (typeof gtag === 'function') {
-      gtag('consent', 'update', {
-        'ad_storage': status,
-        'analytics_storage': status,
-        'ad_user_data': status,
-        'ad_personalization': status
-      });
-    }
-    if (cookieEl) cookieEl.style.display = "none";
+  // Push consent update to dataLayer (GTM Consent Mode v2)
+  function pushConsent(analytics, marketing) {
+    window.dataLayer = window.dataLayer || [];
+    var s = { event: 'cookie_consent_update' };
+    s.analytics_storage  = analytics  ? 'granted' : 'denied';
+    s.ad_storage         = marketing  ? 'granted' : 'denied';
+    s.ad_user_data       = marketing  ? 'granted' : 'denied';
+    s.ad_personalization = marketing  ? 'granted' : 'denied';
+    window.dataLayer.push(s);
   }
 
-  if (cookieEl) {
-    if (localStorage.getItem("cookie-consent")) {
-      cookieEl.style.display = "none";
-    } else {
-      cookieEl.style.opacity = "1";
-    }
-
-    acceptAllBtn?.addEventListener("click", () => setConsent('granted'));
-    acceptNecessaryBtn?.addEventListener("click", () => setConsent('denied'));
+  function saveConsent(analytics, marketing) {
+    var prefs = { analytics: analytics, marketing: marketing, ts: Date.now() };
+    localStorage.setItem('cookie-prefs', JSON.stringify(prefs));
+    pushConsent(analytics, marketing);
+    hideBanner();
+    showReopenBtn();
   }
+
+  function showBanner() {
+    banner.style.opacity = '1';
+    banner.style.pointerEvents = 'auto';
+    banner.style.transform = 'translateX(-50%) translateY(0)';
+  }
+
+  function hideBanner() {
+    banner.style.opacity = '0';
+    banner.style.pointerEvents = 'none';
+    banner.style.transform = 'translateX(-50%) translateY(12px)';
+  }
+
+  function showReopenBtn() {
+    reopenBtn.style.display = 'flex';
+  }
+
+  function openCustomize() {
+    mainPanel.classList.add('hidden');
+    detailPanel.classList.remove('hidden');
+  }
+
+  function closeCustomize() {
+    detailPanel.classList.add('hidden');
+    mainPanel.classList.remove('hidden');
+  }
+
+  // Check existing preferences
+  var stored = localStorage.getItem('cookie-prefs');
+  if (stored) {
+    try {
+      var prefs = JSON.parse(stored);
+      pushConsent(prefs.analytics, prefs.marketing);
+      showReopenBtn();
+    } catch(e) {
+      localStorage.removeItem('cookie-prefs');
+      setTimeout(showBanner, 1200);
+    }
+  } else {
+    // Default denied until user chooses
+    pushConsent(false, false);
+    setTimeout(showBanner, 1200);
+  }
+
+  btnAcceptAll.addEventListener('click', function () { saveConsent(true, true); });
+  btnRejectAll.addEventListener('click', function () { saveConsent(false, false); });
+  btnCustomize.addEventListener('click', openCustomize);
+  btnBack.addEventListener('click', closeCustomize);
+  btnSave.addEventListener('click', function () {
+    saveConsent(chkAnalytics.checked, chkMarketing.checked);
+  });
+
+  // Reopen banner
+  reopenBtn.addEventListener('click', function () {
+    reopenBtn.style.display = 'none';
+    // Pre-fill checkboxes with saved prefs
+    try {
+      var p = JSON.parse(localStorage.getItem('cookie-prefs') || '{}');
+      if (chkAnalytics) chkAnalytics.checked = !!p.analytics;
+      if (chkMarketing) chkMarketing.checked = !!p.marketing;
+    } catch(e) {}
+    closeCustomize();
+    showBanner();
+  });
+})();
 </script>
-

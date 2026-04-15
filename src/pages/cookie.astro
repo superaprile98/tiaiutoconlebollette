@@ -26,55 +26,158 @@ import Footer from "../components/Footer.astro";
       <div
         class="prose prose-slate prose-navy max-w-none space-y-10 text-gray-600 font-light leading-relaxed"
       >
+
         <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
             Cosa sono i cookie
           </h2>
           <p>
-            I cookie sono piccoli file di testo che i siti visitati dagli utenti
-            inviano ai loro terminali, dove vengono memorizzati per essere poi
-            ritrasmessi agli stessi siti alla visita successiva.
+            I cookie sono piccoli file di testo che i siti web memorizzano sul tuo dispositivo durante la navigazione.
+            Servono a far funzionare correttamente il sito, ricordare le tue preferenze e — solo con il tuo consenso —
+            raccogliere dati statistici o pubblicitari.
+          </p>
+          <p class="mt-3">
+            Questa Cookie Policy è redatta in conformità al <strong>GDPR (Reg. UE 2016/679)</strong>, al
+            <strong>D.Lgs. 196/2003</strong> (Codice Privacy) come modificato dal D.Lgs. 101/2018, e alle
+            <strong>Linee Guida del Garante Privacy italiano</strong> del 10 giugno 2021.
           </p>
         </section>
 
         <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
-            Uso dei cookie su questo sito
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            Tipologie di cookie utilizzate
           </h2>
-          <p>
-            Questo sito utilizza <strong>cookie tecnici</strong> necessari al
-            corretto funzionamento della piattaforma e <strong>cookie analitici</strong> (Google Analytics 4) 
-            per raccogliere informazioni in forma aggregata sul numero degli utenti e su come questi visitano il sito.
-          </p>
-          <p class="mt-4">
-            I cookie di Google Analytics vengono utilizzati per analizzare il traffico in modo anonimo, 
-            aiutandoci a migliorare i nostri servizi. Puoi scegliere di accettare o rifiutare questi cookie 
-            tramite il banner informativo che compare al primo accesso.
-          </p>
 
+          <!-- Tecnici -->
+          <div class="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-block bg-navy/10 text-navy text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">Necessari</span>
+              <span class="text-xs text-gray-400">Sempre attivi — nessun consenso richiesto</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">
+              Cookie tecnici indispensabili per il funzionamento del sito. Non raccolgono dati personali identificabili
+              e non richiedono il tuo consenso ai sensi dell'art. 122 co. 1 D.Lgs. 196/2003.
+            </p>
+            <table class="w-full text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-gray-100">
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Nome</th>
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Scopo</th>
+                  <th class="text-left py-1.5 font-black text-navy uppercase tracking-wider">Durata</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-50">
+                <tr>
+                  <td class="py-1.5 pr-3 font-mono text-navy">cookie-prefs</td>
+                  <td class="py-1.5 pr-3 text-gray-500">Salva le preferenze cookie dell'utente</td>
+                  <td class="py-1.5 text-gray-500">12 mesi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Analitici -->
+          <div class="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-block bg-orange/10 text-orange text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">Analitici</span>
+              <span class="text-xs text-gray-400">Richiedono consenso</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">
+              Utilizzati per raccogliere informazioni aggregate sull'utilizzo del sito (pagine visitate, durata sessione, provenienza del traffico).
+              I dati sono anonimizzati e non permettono l'identificazione degli utenti.
+            </p>
+            <table class="w-full text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-gray-100">
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Fornitore</th>
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Cookie</th>
+                  <th class="text-left py-1.5 font-black text-navy uppercase tracking-wider">Durata</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-50">
+                <tr>
+                  <td class="py-1.5 pr-3 font-medium text-navy">Google Analytics 4</td>
+                  <td class="py-1.5 pr-3 font-mono text-gray-500">_ga, _ga_*</td>
+                  <td class="py-1.5 text-gray-500">14 mesi</td>
+                </tr>
+                <tr>
+                  <td class="py-1.5 pr-3 font-medium text-navy">Google Tag Manager</td>
+                  <td class="py-1.5 pr-3 font-mono text-gray-500">_gtm_*</td>
+                  <td class="py-1.5 text-gray-500">Sessione</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-xs text-gray-400 mt-3">
+              <a href="https://policies.google.com/privacy" target="_blank" class="text-orange font-bold hover:underline">Privacy Policy Google</a>
+              &nbsp;·&nbsp;
+              <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" class="text-orange font-bold hover:underline">Opt-out Google Analytics</a>
+            </p>
+          </div>
+
+          <!-- Marketing -->
+          <div class="bg-white rounded-2xl border border-gray-100 p-5">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-block bg-red-50 text-red-500 text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">Marketing</span>
+              <span class="text-xs text-gray-400">Richiedono consenso</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-3">
+              Utilizzati per misurare l'efficacia delle campagne pubblicitarie su Google Ads e per eventuale remarketing.
+              Consentono di tracciare conversioni (es. invio del modulo di contatto) e ottimizzare gli annunci.
+            </p>
+            <table class="w-full text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-gray-100">
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Fornitore</th>
+                  <th class="text-left py-1.5 pr-3 font-black text-navy uppercase tracking-wider">Cookie</th>
+                  <th class="text-left py-1.5 font-black text-navy uppercase tracking-wider">Durata</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-50">
+                <tr>
+                  <td class="py-1.5 pr-3 font-medium text-navy">Google Ads</td>
+                  <td class="py-1.5 pr-3 font-mono text-gray-500">_gcl_au, _gads</td>
+                  <td class="py-1.5 text-gray-500">90 giorni</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-xs text-gray-400 mt-3">
+              <a href="https://adssettings.google.com" target="_blank" class="text-orange font-bold hover:underline">Gestisci preferenze annunci Google</a>
+            </p>
+          </div>
         </section>
 
         <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
-            Cookie di terze parti
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            Come gestire o revocare il consenso
           </h2>
           <p>
-            Utilizziamo <strong>Google Analytics 4 (GA4)</strong>, un servizio di analisi web fornito da Google Inc. 
-            Google utilizza i dati raccolti allo scopo di tracciare ed esaminare l'utilizzo di questo sito, 
-            compilare report e condividerli con gli altri servizi sviluppati da Google.
+            Puoi modificare o revocare le tue preferenze cookie in qualsiasi momento cliccando sull'icona
+            <strong>ⓘ</strong> in basso a sinistra nella pagina, oppure tramite le impostazioni del tuo browser:
           </p>
-
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm">
+            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" class="text-orange font-bold hover:underline">Google Chrome</a></li>
+            <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox" target="_blank" class="text-orange font-bold hover:underline">Mozilla Firefox</a></li>
+            <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" class="text-orange font-bold hover:underline">Apple Safari</a></li>
+            <li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" class="text-orange font-bold hover:underline">Microsoft Edge</a></li>
+          </ul>
+          <p class="mt-3 text-sm">
+            La disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito.
+          </p>
         </section>
 
-        <div
-          class="pt-10 border-t border-gray-100 italic text-sm text-gray-400"
-        >
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            Contatti e reclami
+          </h2>
+          <p>
+            Per qualsiasi richiesta relativa ai cookie scrivi a
+            <a href="mailto:info@tiaiutoconlebollette.it" class="text-orange font-bold hover:underline">info@tiaiutoconlebollette.it</a>.
+            Hai inoltre il diritto di presentare reclamo al
+            <a href="https://www.garanteprivacy.it" target="_blank" class="text-orange font-bold hover:underline">Garante per la Protezione dei Dati Personali</a>.
+          </p>
+        </section>
+
+        <div class="pt-10 border-t border-gray-100 italic text-sm text-gray-400">
           Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
         </div>
       </div>

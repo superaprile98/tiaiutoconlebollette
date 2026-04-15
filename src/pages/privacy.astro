@@ -27,106 +27,138 @@ import Footer from "../components/Footer.astro";
         class="prose prose-slate prose-navy max-w-none space-y-10 text-gray-600 font-light leading-relaxed"
       >
         <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
             1. Titolare del Trattamento
           </h2>
-          Il titolare del trattamento dei dati è il team di <strong
-            >Ti aiuto con le bollette</strong
-          > (nella persona di Stefano Moretti), con sede operativa a Empoli e Provincia,
-          Toscana. Per qualsiasi domanda relativa alla privacy, puoi scriverci a:
-          <a
-            href="mailto:tiaiutoconlebollette@gmail.com"
-            class="text-orange font-bold hover:underline"
-            >tiaiutoconlebollette@gmail.com</a
-          >.
+          <p>
+            Il titolare del trattamento dei dati è <strong>Stefano Moretti</strong>,
+            operante sotto il nome commerciale <strong>Ti aiuto con le bollette</strong>,
+            con sede operativa a Empoli (FI), Toscana.
+          </p>
+          <p class="mt-3">
+            Per qualsiasi domanda relativa alla privacy puoi scriverci a:&nbsp;
+            <a href="mailto:info@tiaiutoconlebollette.it" class="text-orange font-bold hover:underline">
+              info@tiaiutoconlebollette.it
+            </a>
+          </p>
         </section>
 
         <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
             2. Dati Raccolti e Finalità
           </h2>
-          <p>
-            Attraverso il modulo di contatto o l'invio di email, raccogliamo
-            solo i dati che decidi di fornirci volontariamente (come nome,
-            cognome, email o numero di telefono). Questi dati vengono utilizzati <strong
-              >esclusivamente</strong
-            > per:
-          </p>
-          <ul class="list-disc pl-5 mt-4 space-y-2">
-            <li>Rispondere alle tue richieste di informazioni o preventivo.</li>
-            <li>Fornirti la consulenza energetica richiesta.</li>
-            <li>Analizzare in forma anonima il traffico del sito tramite Google Analytics.</li>
-            <li>Adempiere ad eventuali obblighi di legge.</li>
-          </ul>
-
-          <p class="mt-4">
-            Non utilizziamo i tuoi dati per invio di spam, newsletter non
-            richieste o per cessione a terze parti a scopo pubblicitario.
-          </p>
-        </section>
-
-        <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
-            3. Base Legale del Trattamento
-          </h2>
-          <p>
-            Trattiamo i tuoi dati personali sulla base del tuo consenso (quando
-            compili il form o ci scrivi) e per l'esecuzione di misure
-            pre-contrattuali (la richiesta di consulenza).
-          </p>
-        </section>
-
-        <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
-            4. Comunicazione a Terzi (Fornitori di Servizi)
-          </h2>
-          <p>
-            I tuoi dati non vengono venduti o ceduti a terze parti per scopi di
-            marketing. Tuttavia, per poter gestire le tue richieste, ci
-            avvaliamo di servizi e piattaforme tecnologiche esterne (es.
-            provider per l'invio e la gestione tecnica delle email, come Resend)
-            che agiscono in qualità di <strong
-              >Responsabili del Trattamento</strong
-            >. Tali servizi elaborano i dati esclusivamente per le finalità
-            tecniche necessarie ad erogare il servizio richiesto (consegna della
-            posta elettronica).
-          </p>
-        </section>
-
-        <section>
-          <h2
-            class="font-black mb-4 uppercase text-sm tracking-widest text-orange"
-          >
-            5. I Tuoi Diritti
-          </h2>
-          <p>Secondo il GDPR (Regolamento UE 2016/679), hai il diritto di:</p>
+          <p>Raccogliamo i seguenti dati personali esclusivamente per le finalità indicate:</p>
           <ul class="list-disc pl-5 mt-4 space-y-2">
             <li>
-              Chiedere l'accesso ai tuoi dati, la rettifica o la cancellazione.
+              <strong>Dati di contatto</strong> (nome, email) — forniti volontariamente tramite il modulo contatti —
+              per rispondere alle richieste di informazioni e fornire la consulenza energetica richiesta.
             </li>
-            <li>Opporti al trattamento o chiederne la limitazione.</li>
-            <li>Revocare il consenso in qualsiasi momento.</li>
+            <li>
+              <strong>Dati di navigazione</strong> (indirizzo IP anonimizzato, pagine visitate, durata sessione) —
+              raccolti tramite Google Analytics 4 via Google Tag Manager — per analisi statistica anonima del traffico,
+              solo con il tuo esplicito consenso.
+            </li>
+            <li>
+              <strong>Dati pubblicitari</strong> (interazioni con gli annunci, conversioni) —
+              tramite Google Ads via Google Tag Manager — per misurare l'efficacia delle campagne pubblicitarie,
+              solo con il tuo esplicito consenso.
+            </li>
           </ul>
           <p class="mt-4">
-            Per esercitare questi diritti, basta inviare una semplice email a <a
-              href="mailto:tiaiutoconlebollette@gmail.com"
-              class="text-orange font-bold hover:underline"
-              >tiaiutoconlebollette@gmail.com</a
-            >.
+            Non utilizziamo i tuoi dati per invio di newsletter non richieste né li cediamo a terze parti per scopi di marketing.
           </p>
         </section>
 
-        <div
-          class="pt-10 border-t border-gray-100 italic text-sm text-gray-400"
-        >
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            3. Base Legale del Trattamento
+          </h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Consenso esplicito</strong> (art. 6 §1 lett. a GDPR) — per cookie analitici e di marketing, revocabile in qualsiasi momento.</li>
+            <li><strong>Esecuzione di un contratto / misure precontrattuali</strong> (art. 6 §1 lett. b GDPR) — per i dati del modulo contatti.</li>
+            <li><strong>Legittimo interesse</strong> (art. 6 §1 lett. f GDPR) — per i soli cookie tecnici strettamente necessari al funzionamento del sito.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            4. Responsabili del Trattamento (Terze Parti)
+          </h2>
+          <p>Ci avvaliamo dei seguenti fornitori di servizi che trattano dati per nostro conto:</p>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-2 pr-4 font-black text-navy text-xs uppercase tracking-widest">Fornitore</th>
+                  <th class="text-left py-2 pr-4 font-black text-navy text-xs uppercase tracking-widest">Servizio</th>
+                  <th class="text-left py-2 font-black text-navy text-xs uppercase tracking-widest">Privacy</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr>
+                  <td class="py-2 pr-4 font-medium text-navy">Google LLC</td>
+                  <td class="py-2 pr-4 text-gray-500">Tag Manager, Analytics 4, Ads</td>
+                  <td class="py-2"><a href="https://policies.google.com/privacy" target="_blank" class="text-orange hover:underline font-bold text-xs">policies.google.com</a></td>
+                </tr>
+                <tr>
+                  <td class="py-2 pr-4 font-medium text-navy">Resend Inc.</td>
+                  <td class="py-2 pr-4 text-gray-500">Invio email transazionali</td>
+                  <td class="py-2"><a href="https://resend.com/privacy" target="_blank" class="text-orange hover:underline font-bold text-xs">resend.com/privacy</a></td>
+                </tr>
+                <tr>
+                  <td class="py-2 pr-4 font-medium text-navy">Cloudflare Inc.</td>
+                  <td class="py-2 pr-4 text-gray-500">Hosting e CDN</td>
+                  <td class="py-2"><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" class="text-orange hover:underline font-bold text-xs">cloudflare.com/privacy</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            5. Periodo di Conservazione
+          </h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Dati del modulo contatti:</strong> conservati per il tempo necessario a gestire la richiesta e per un massimo di 24 mesi.</li>
+            <li><strong>Cookie analitici Google Analytics:</strong> dati aggregati conservati per 14 mesi (impostazione predefinita GA4).</li>
+            <li><strong>Cookie di marketing:</strong> fino a 13 mesi, salvo revoca del consenso.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            6. I Tuoi Diritti (GDPR Art. 15-22)
+          </h2>
+          <p>Hai il diritto di:</p>
+          <ul class="list-disc pl-5 mt-3 space-y-2">
+            <li>Accedere ai tuoi dati personali (art. 15)</li>
+            <li>Rettificare dati inesatti (art. 16)</li>
+            <li>Ottenere la cancellazione ("diritto all'oblio", art. 17)</li>
+            <li>Richiedere la limitazione del trattamento (art. 18)</li>
+            <li>Opporti al trattamento (art. 21)</li>
+            <li><strong>Revocare il consenso in qualsiasi momento</strong> — tramite il banner cookie in fondo alla pagina</li>
+            <li>Proporre reclamo al Garante Privacy italiano (<a href="https://www.garanteprivacy.it" target="_blank" class="text-orange font-bold hover:underline">garanteprivacy.it</a>)</li>
+          </ul>
+          <p class="mt-4">
+            Per esercitare i tuoi diritti scrivi a:&nbsp;
+            <a href="mailto:info@tiaiutoconlebollette.it" class="text-orange font-bold hover:underline">
+              info@tiaiutoconlebollette.it
+            </a>. Risponderemo entro 30 giorni.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-black mb-4 uppercase text-sm tracking-widest text-orange">
+            7. Trasferimento Dati Extra-UE
+          </h2>
+          <p>
+            Google LLC ha sede negli USA. Il trasferimento avviene nel rispetto delle garanzie previste dall'art. 46 GDPR
+            (Standard Contractual Clauses) e dell'accordo UE-USA Data Privacy Framework.
+          </p>
+        </section>
+
+        <div class="pt-10 border-t border-gray-100 italic text-sm text-gray-400">
           Ultimo aggiornamento: {new Date().toLocaleDateString("it-IT")}
         </div>
       </div>
